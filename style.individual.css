@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Exo 2", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    background-image: linear-gradient(#000000, #040257);
+
+
+  }
+  
+  .container {
+    width:  80%;
+    margin: auto;
+  }
+  
+  .header {
+    background-image: url(./imgs/R6.gif);
+    margin-left: 7%;
+    color: red;
+    /* border: 3px solid yellow; */
+    width: 85%;
+    height: 40vh;
+    border-right:  grey groove 1px;
+    border-left:  grey groove 1px; 
+  }
+  
+  .header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 3px solid pink; */
+    width: auto;
+  }
+  
+  .header a {
+    text-decoration: none;
+    color:  #ffd900;
+  }
+
+  .header h1{
+      text-size-adjust:initial;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin-top: 7%;
+      font-style: none;
+  }
+  
+  .agora {
+    font-weight: 800;
+  }
+  
+  .navbar {
+    width: 150vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    color:  #ffd900;
+    margin-top: 7%;
+    /* border: 3px solid green; */
+
+  }
+
+  .banner {
+    height: 110vh;
+    color: white;
+    /* border: 3px solid yellow; */
+    background-image: url("./imgs/galacia.gif");
+    background-size: cover;
+    width: 85%;
+    margin-left: 7%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-right:  grey groove 1px;
+    border-left:  grey groove 1px;
+  }
+  
+  .banner .container {
+    /* border: 3px solid green; */
+    height: 500px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  
+  .banner p {
+    /* border: 3px solid cyan; */
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    width: 280px;
+    font-size: 36px;
+    margin-left: 15%;
+    
+  }
+  
+  .banner span {
+    font-weight: 800;
+  }
+
+  .social {
+      
+    background-color: #dddbdb;
+    /* border: 3px solid yellowgreen; */
+    padding: 50px 0;
+    width: 85%;
+    margin-left: 7%;
+    border-right:  grey groove 1px;
+    border-left:  grey groove 1px;
+    height: auto;
+  }
+  
+  .social .container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    /* border: 3px solid blue; */
+  }
+  
+  /* usar este bloco para explicar margin e padding*/
+  .social .titulo {
+    /* border: 3px solid pink; */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  
+  .social h2 {
+    display: flex;
+    padding: 20px;
+    background-color: #040257;
+    border-radius: 20px;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    color: #e6005a;
+    margin: 0;
+    /* border: 3px solid orange; */
+  }
+  
+  .social .boxes {
+    display: flex;
+    /* border: 3px solid blue; */
+  }
+  
+  .social .box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: auto;
+    color: #020120;
+    /* border: 3px solid yellow; */
+  }
+  
+  .social .box img {
+    width: 150px;
+    align-self: center;
+  }
+  
+  .social h4 {
+    color: #e6005a;
+    
+  }
+
+  .social p{
+      width: 100%;
+      font-weight: 800;
+  }
+
+  
+  
