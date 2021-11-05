@@ -97,7 +97,7 @@ body {
     border-right:  grey groove 1px;
     border-left:  grey groove 1px;
     height: auto;
-    background-image: linear-gradient( #131377 ,#2ec011 );
+    background-image: linear-gradient( #02022c ,#2ec011 );
   }
   
   .social .container {
@@ -163,7 +163,7 @@ body {
     border-right:  grey groove 1px;
     border-left:  grey groove 1px;
     height: auto;
-    background-image: linear-gradient( #2ec011 ,#090780 );
+    background-image: linear-gradient( #2ec011 ,#040257);
   }
   
   .Genero .container {
@@ -234,6 +234,8 @@ body {
     font-weight: 800;
     color: #e6005a;
     justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 10%;
   }
 
     
