@@ -16,7 +16,7 @@ body {
     margin-left: 7%;
     color: red;
     width: 85%;
-    height: 40vh;
+    height: 30vh;
     border-right:  grey groove 1px;
     border-left:  grey groove 1px;
   }
@@ -52,7 +52,7 @@ body {
     justify-content: space-evenly;
     list-style: none;
     color:  #ffd900;
-    margin-top: 5%;
+    margin-top: 0;
   }
 
   .banner {
@@ -82,6 +82,8 @@ body {
     padding: 0;
     width: 280px;
     font-size: 36px;
+    background-color: #0a2d4da1;
+    border-radius: 12px;
   }
   
   .banner span {
@@ -97,7 +99,7 @@ body {
     border-right:  grey groove 1px;
     border-left:  grey groove 1px;
     height: auto;
-    background-image: linear-gradient( #02022c ,#2ec011 );
+    background-color: black;
   }
   
   .social .container {
@@ -163,7 +165,7 @@ body {
     border-right:  grey groove 1px;
     border-left:  grey groove 1px;
     height: auto;
-    background-image: linear-gradient( #2ec011 ,#040257);
+    background-image: linear-gradient( white);
   }
   
   .Genero .container {
