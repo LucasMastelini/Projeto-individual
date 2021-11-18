@@ -13,8 +13,12 @@ body {
   .header {
     display: flex;
     background-image: url(./imgs/R6.gif);
+    background-repeat: no-repeat;
+    background-size: 80%;
     margin-left: 7%;
     color: red;
+    background-position-y: 20%;
+    background-position-x: 58%;
     width: 85%;
     height: 30vh;
     border-right:  grey groove 1px;
@@ -30,14 +34,15 @@ body {
   
   .header a {
     text-decoration: none;
-    color:  #ffd900;
+    color:  white;
+    
   }
 
   .header h1{
     
       text-size-adjust:initial;
       font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin-top: 7%;
+      margin-top: 5%;
       font-style: none;
   }
   
@@ -51,8 +56,10 @@ body {
     align-items: center;
     justify-content: space-evenly;
     list-style: none;
-    color:  #ffd900;
+    color:  black;
     margin-top: 0;
+    font-size: 25px;
+    font-weight: 700;
   }
 
   .banner {
@@ -81,8 +88,9 @@ body {
     margin: 0;
     padding: 0;
     width: 280px;
+    font-weight: 700;
     font-size: 36px;
-    background-color: #0a2d4da1;
+    background-color: #01090ed9;
     border-radius: 12px;
   }
   
@@ -148,12 +156,15 @@ body {
   
   .social h4 {
     color: #ff0163;
+    font-weight: 800;
+    font-size: 20px;
     
   }
 
   .social p{
       width: 100%;
-      font-weight: 800;
+      font-weight: 900;
+      font-size: 18px;
   }
 
   .Genero {
@@ -166,13 +177,23 @@ body {
     border-left:  grey groove 1px;
     height: auto;
     background-image: linear-gradient( white);
+    background-image: url("https://blog.bemmaisseguro.com/wp-content/uploads/2017/05/Modern-Combat-5.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-right:  grey groove 1px;
+    border-left:  grey groove 1px;
   }
   
   .Genero .container {
     display: flex;
     justify-content: space-evenly;
-    flex-direction: column;
-    
+    flex-direction: column; 
+  }
+
+  .Genero .container .wall{
+    background-color: #ffffff4f;
+
   }
   
   
@@ -180,6 +201,7 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
+
   }
   
   .Genero h2 {
@@ -192,43 +214,44 @@ body {
     text-align: center;
     color: #e6005a;
     margin: 0;
+    font-size: 30px;
   }
   
-  .Genero .boxes {
+  .Genero .boxes .box {
     display: flex;
   }
   
-  .Genero .box {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    width: 33%;
-  }
+ .Genero p{
+    width: 100%;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+/* .Genero .box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  width: auto; */
   
-  .Genero .box img {
-    width: 150px;
-    align-self: center;
-  }
+/* } */
   
   .Genero .container h4{
     display: flex;
     color: #e6005a;
     margin-top: 30px;
     width: auto;
-    flex-direction: column;
+    
   }
 
-  .Genero .box1{
+  /* .Genero .box{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    flex-direction: column;
     text-align: center;
     width: auto;
     
-  }
+  } */
 
   .Genero  span{
     display: flex;
@@ -238,6 +261,7 @@ body {
     justify-content: center;
     margin-top: 5%;
     margin-bottom: 10%;
+    font-size: 22px;
   }
 
     
