@@ -1,0 +1,223 @@
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Exo 2', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+  ::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    border-radius: 100px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background-color: #f98e37;
+    border-radius: 100px;
+}
+
+
+
+
+.banner {
+  height: 110vh;
+  color: white;
+  background-image: url('../assets/img/galacia.gif');
+  background-size: cover;
+  width: 100%;
+  margin-left: 0%;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
+.container {
+  width: 65%;
+  margin: auto;
+}
+
+.banner .container {
+  height: 500px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+
+
+
+.banner p {
+  color: #ff0062;
+  width: 28%;
+  margin: 0;
+  padding: 0;
+  /* font-weight: 500; */
+  font-size: 36px;
+  background-color: #01090ed9;
+  border-radius: 12px;
+}
+
+.banner span {
+  font-weight: 900;
+}
+
+.social {
+  background-color: #e6ddddcc;
+  padding: 50px 0;
+  width: 100%;
+  margin-left: 0%;
+  height: auto;
+  background-color: black;
+  background-image: url('https://www.artstation.com/artwork/o2eBz');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.social .container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.social .titulo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.social h2 {
+  display: flex;
+  padding: 20px;
+  background-color: #040257;
+  border-radius: 20px;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  color: #e6005a;
+  margin: 0;
+}
+
+.social .boxes {
+  display: flex;
+}
+
+.social .box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: auto;
+  color: #ffffff;
+}
+
+.social .box img {
+  width: 150px;
+  align-self: center;
+}
+
+.social h4 {
+  color: #ff0163;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.social p {
+  width: 100%;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.Genero {
+  display: flex;
+  background-color: #e6ddddcc;
+  padding: 50px 0;
+  width: 100%;
+
+  height: auto;
+  background-image: linear-gradient(white);
+  background-image: url('https://staticctf.akamaized.net/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7iKoGngda7z0LyYpTT25zM/2ba16741ffa8a7d8b4629ed870d8a870/r6s-seasons-y6s1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.Genero .container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.Genero .container .wall {
+  background-color: #91afd975;
+  border-radius: 15px;
+}
+
+.Genero .titulo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.Genero h2 {
+  display: flex;
+  padding: 20px;
+  background-color: #040257;
+  border-radius: 20px;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  color: #e6005a;
+  margin: 0;
+  font-size: 30px;
+}
+
+.Genero .boxes .box {
+  display: flex;
+}
+
+.Genero p {
+  width: 100%;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+/* .Genero .box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  width: auto; */
+
+/* } */
+
+.Genero .container h4 {
+  display: flex;
+  color: #e6005a;
+  margin-top: 30px;
+  width: auto;
+}
+
+/* .Genero .box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: auto;
+    
+  } */
+
+.Genero span {
+  display: flex;
+  width: 100%;
+  font-weight: 800;
+  color: #fff;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  font-size: 22px;
+}
