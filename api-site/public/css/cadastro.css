@@ -27,7 +27,7 @@ body {
   }
   
   .banner-login .container {
-    height: 550px;
+    height: 660px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,17 +35,17 @@ body {
   }
   
   .banner-login {
-    color: #ad693a;
+    color: #ff6902;
   }
 
   .banner-login h2{
     font-weight: 700;
-    color: #ad693a;
+    color: #ff6902;
   }
   
   .banner-login .card {
     background-color: #3f35346e;
-    height: 500px;
+    height: 450px;
     width: 400px;
     display: flex;
     justify-content: center;
@@ -73,7 +73,7 @@ body {
   
   input {
     height: 30px;
-    border: 2px solid #ad693a;
+    border: 2px solid #ff6902;
     border-radius: 10px;
   }
   
@@ -84,11 +84,11 @@ body {
     font-weight: 600;
     font-size: 18px;
     padding: 10px 15px;
-    color: #3e0606f7;
-    background-color: #ad693a;
+    color: #ff6902;
+    background-color: #3e0606f7;
     width: 120px;
     align-self: center;
-    transition: all 0.5s ease;
+    transition: all 0.7s ease;
    
   }
 
@@ -98,11 +98,11 @@ body {
     font-size: 18px;
     padding: 10px 15px;
     color: #3e0606f7;
-    background-color: #ad693a;
+    background-color: #ff6902;
     width: 150px;
     align-self: center;
     transform:translate(0% , -25%);
-    transition: all 0.5s ease;
+    transition: all 0.7s ease;
   }
   
   .div_form {
