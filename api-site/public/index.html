@@ -72,7 +72,7 @@
                 <span class="tooltip">Configurações</span>
             </li>
             <li>
-                <a href="">
+                <a href="" onclick="limparSessao()">
                     <i class='bx bx-log-out-circle'></i>
                     <span onclick="limparSessao" class="links_name" >Log-out</span>
                 </a>
@@ -243,22 +243,14 @@ var h1LoginUsuario = document.getElementById("h1_login_usuario");
 
 if (email != null && nome != null) {
     window.alert(`Seja bem-vindo, ${nickName}!`);
-    profile.innerHTML.style.visibility = "visible" ;
-    fechar_cadastro.innerHTML.style.display = "none";
-    fechar_login.innerHTML.style.display = "none";
-    fechar_vazio.innerHTML.style.display = "none";
+    profile.style.visibility = "visible" ;
+    fechar_cadastro.style.display = "none";
+    fechar_login.style.display = "none";
+    fechar_vazio.style.display = "none";
     nick.innerHTML = `${nickName}`;
     if (h1LoginUsuario != undefined) {
         h1LoginUsuario.innerHTML = email;
     }
-
-    
-    
-
-
-} else {
-    window.location = "./login_lucas.html";
-    ;
 }
 }
     function limparSessao() {
