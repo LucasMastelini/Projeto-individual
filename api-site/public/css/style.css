@@ -20,7 +20,13 @@ body {
     border-radius: 100px;
 }
 
-
+/* cores para o site
+#fa6900 laranja escuro
+#f38630 laranja claro
+#e0e4cc off white
+#a7dbd8 azul claro
+#69d2e7 azul céu  
+*/
 
 
 .banner {
@@ -51,7 +57,7 @@ body {
 
 
 .banner p {
-  color: #ff0062;
+  color: #fa6900;
   width: 23%;
   margin: 0;
   padding: 0;
@@ -83,6 +89,8 @@ body {
   flex-direction: column;
 }
 
+
+
 .social .container .box {
   display: flex;
   width: 100%;
@@ -100,25 +108,32 @@ body {
   
   width: 100%;
   height: 100%;
-  color: #ffffff;
   transition: all 0.5s ease;
-
 }
 .filho {
+  color: #fff;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
   text-align: center;
   position: relative;
-  transform: scaleX(0);
-  transform-origin: bottom;
-  transition: transform 2500ms;
- 
-  }
+  left: -100%;
+  transform-origin: left;
+  transition: left 1000ms;
+  background: rgb(6,2,79);
+  background: linear-gradient(90deg, rgba(6,2,79,0.7580429248595506) 0%, rgba(34,31,124,0.8563575316011236) 50%, rgba(6,2,79,0.7608519136235955) 84%);
+  border-radius: 20px;  
+}
+
 .box:hover .filho {
-  transform: scaleX(1);
+  background: rgb(6,2,79);
+  background: linear-gradient(90deg, rgba(6,2,79,0.7580429248595506) 0%, rgba(34,31,124,0.8563575316011236) 50%, rgba(6,2,79,0.7608519136235955) 84%);
+  color: #ffffff;
+  
   left: 0%;
+  
+  border-radius: 20px;  
 }
 
 .social .titulo {
@@ -130,15 +145,16 @@ body {
 .social h2 {
   display: flex;
   padding: 20px;
-  background-color: #040257;
+  background-color: #3d8b9b;
   border-radius: 20px;
   align-self: center;
   justify-self: center;
   text-align: center;
-  color: #e6005a;
+  color: #fa6900;
   margin: 0;
   transition: transform 1s;
   transform: translateX(0) scale(0.5);
+  transition: all 1499ms ease;
 }
 
 .social h2:hover {
@@ -149,9 +165,10 @@ body {
   align-self: center;
   justify-self: center;
   text-align: center;
-  color: #e6005a;
+  color: #f38630;
   margin: 0;
   transform: translateX(10px) scale(1.2);
+  transition: all 1500ms ease;
 
 }
 
@@ -160,26 +177,10 @@ body {
 }
 
 
-
-.social .box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  width: auto;
-  color: #ffffff;
-}
-
-.social .box img {
-  width: 150px;
-  align-self: center;
-}
-
 .social h4 {
   color: #ff0163;
-  font-weight: 800;
-  font-size: 20px;
+  font-weight: 900;
+  font-size: 25px;
 }
 
 .social p {
@@ -209,8 +210,9 @@ body {
 }
 
 .Genero .container .wall {
-  background-color: #91afd975;
-  border-radius: 15px;
+  background: rgb(6,2,79);
+  background: linear-gradient(90deg, rgba(6,2,79,0.7580429248595506) 0%, rgba(34,31,124,0.8563575316011236) 50%, rgba(6,2,79,0.7608519136235955) 84%);  
+  border-radius: 20px;
 }
 
 .Genero .titulo {
@@ -222,16 +224,17 @@ body {
 .Genero h2 {
   display: flex;
   padding: 20px;
-  background-color: #040257;
+  background-color: #3e93a3;
   border-radius: 20px;
   align-self: center;
   justify-self: center;
   text-align: center;
-  color: #e6005a;
+  color: #f38630;
   margin: 0;
   font-size: 30px;
   transition: transform 1s;
   transform: translateX(0) scale(0.5);
+  transition: all 1500ms ease;
 }
 
 .Genero h2:hover {
@@ -242,10 +245,11 @@ body {
   align-self: center;
   justify-self: center;
   text-align: center;
-  color: #e6005a;
+  color: #f38630;
   margin: 0;
   font-size: 30px;
   transform: translateX(10px) scale(1.2);
+  transition: all 1500ms ease;
 }
 
 
@@ -254,19 +258,13 @@ body {
 }
 
 .Genero p {
+  color: #FFF;
   width: 100%;
   font-weight: 900;
   font-size: 18px;
 }
 
-/* .Genero .box{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  width: auto; */
 
-/* } */
 
 .Genero .container h4 {
   display: flex;
@@ -275,20 +273,13 @@ body {
   width: auto;
 }
 
-/* .Genero .box{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    width: auto;
-    
-  } */
+
 
 .Genero span {
   display: flex;
   width: 100%;
   font-weight: 800;
-  color: #fff;
+  color: #ff0163;
   justify-content: center;
   margin-top: 5%;
   margin-bottom: 10%;
