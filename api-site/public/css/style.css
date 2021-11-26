@@ -111,10 +111,13 @@ body {
   flex-direction: column;
   text-align: center;
   position: relative;
-  left: -100%;
-  transition: left 1200ms ;
-}
+  transform: scaleX(0);
+  transform-origin: bottom;
+  transition: transform 2500ms;
+ 
+  }
 .box:hover .filho {
+  transform: scaleX(1);
   left: 0%;
 }
 
