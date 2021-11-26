@@ -5,13 +5,24 @@
     left: 0;
     height: 100%;
     width: 45px;
-    background-color: #11101d;
     padding: 10px 12px;
     transition: all 0.5s ease;
   }
   
   .sidebar.active {
     width: 170px;
+  }
+
+  .sidebar .logo_content{
+    padding-top: 11%;
+    padding-left: 11%;
+  }
+
+  .sidebar .logo_content .logo  img{
+    padding-top: 1%;
+    padding-right: 6%;
+    width: 28px;
+    height: 28px;
   }
   
   .sidebar .logo_content .logo {
@@ -50,24 +61,27 @@
   .sidebar #btn {
     position: absolute;
     color: #fff;
-    left: 100%;
-    top: 6px;
+    left: 75px;
+    top: 18px;
     font-size: 20px;
     height: 50px;
     width: 50px;
     text-align: center;
     line-height: 50px;
     transform: translateX(-50px);
+    transition: all 0.5s ease;
   }
   
   .sidebar.active #btn {
     left: 100%;
+    transition: all 0.5s ease;
   }
   
   .sidebar ul {
     margin-top: 20px;
-    padding: 0;
-  }
+    padding-left: 5px;
+}
+  
   
   .sidebar ul li {
     position: relative;
@@ -82,7 +96,7 @@
     position: relative;
     left: 122px;
     top: 0;
-    transform: translate(-50%, -100%);
+    transform: translate(-55%, -200%);
     border-radius: 6px;
     height: 35px;
     width: 122px;
@@ -94,6 +108,7 @@
     opacity: 0;
     pointer-events: none;
     display: block;
+    transition: all 0.5s ease;
   }
   
   .sidebar.active ul li .tooltip {
@@ -104,6 +119,7 @@
     transition: all 0.5s ease;
     opacity: 1;
     top: 50%;
+    transition: all 0.5s ease;
   }
   
   .sidebar ul li a {
@@ -114,12 +130,21 @@
     transition: all 0.4s ease;
     border-radius: 12px;
     white-space: nowrap;
+    transition: all 0.5s ease;
+  }
+
+  .sidebar.active ul li a:hover{
+    color: #11101d;
+    background: rgb(255, 255, 255);
+    transition: all 0.5s ease;
   }
   
   .sidebar ul li a:hover {
-    color: #11101d;
-    background: #fff;
+    color: #fff;
+    background: rgba(255, 255, 255, 0);
+    
   }
+  /* #11101d */
   
   .sidebar ul li i {
     height: 50px;
@@ -127,6 +152,29 @@
     border-radius: 12px;
     line-height: 50px;
     text-align: center;
+    opacity: 0.3;
+    transition: all 0.5s ease;
+  }
+
+  .sidebar ul li i:hover {
+    background-color: none;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .sidebar.active ul li i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+    opacity: 1;
+    transition: all 0.5s ease;
   }
   
   .sidebar .links_name {
@@ -173,10 +221,19 @@
   }
   
   .sidebar.active .profile_content .profile {
-    background: #1d1b31;
+    /* background: #1d1b31; */
+    padding-left: 17%;
     transition: all 0.5s ease;
   }
   
+/* cores para o site
+#fa6900 laranja escuro
+#f38630 laranja claro
+#e0e4cc off white
+#a7dbd8 azul claro
+#69d2e7 azul céu  
+*/
+
   .profile_content .profile .profile_details {
     display: flex;
     align-items: center;

@@ -7,7 +7,7 @@ body {
 }
 
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 0;
 }
  
 ::-webkit-scrollbar-track {
@@ -32,7 +32,7 @@ body {
   margin-left: 0%;
   background-repeat: no-repeat;
   background-position: center;
-  background-position-x: 5%;
+  
 }
 
 .container {
@@ -52,12 +52,11 @@ body {
 
 .banner p {
   color: #ff0062;
-  width: 28%;
+  width: 23%;
   margin: 0;
   padding: 0;
   /* font-weight: 500; */
   font-size: 36px;
-  
   border-radius: 12px;
 }
 
@@ -66,6 +65,7 @@ body {
 }
 
 .social {
+  display: flex;
   background-color: #e6ddddcc;
   padding: 50px 0;
   width: 100%;
@@ -75,14 +75,47 @@ body {
   background-image: url('../assets/img/fundo.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: fixed
-  ;
 }
 
 .social .container {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
+}
+
+.social .container .box {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease; 
+  
+}
+.social .container .box:hover {
+  
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+
+}
+.filho {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  left: -100%;
+  transition: left 1200ms ;
+}
+.box:hover .filho {
+  left: 0%;
 }
 
 .social .titulo {
@@ -101,11 +134,29 @@ body {
   text-align: center;
   color: #e6005a;
   margin: 0;
+  transition: transform 1s;
+  transform: translateX(0) scale(0.5);
+}
+
+.social h2:hover {
+  display: flex;
+  padding: 20px;
+  background-color: #040257;
+  border-radius: 20px;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  color: #e6005a;
+  margin: 0;
+  transform: translateX(10px) scale(1.2);
+
 }
 
 .social .boxes {
   display: flex;
 }
+
+
 
 .social .box {
   display: flex;
@@ -176,7 +227,24 @@ body {
   color: #e6005a;
   margin: 0;
   font-size: 30px;
+  transition: transform 1s;
+  transform: translateX(0) scale(0.5);
 }
+
+.Genero h2:hover {
+  display: flex;
+  padding: 20px;
+  background-color: #040257;
+  border-radius: 20px;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  color: #e6005a;
+  margin: 0;
+  font-size: 30px;
+  transform: translateX(10px) scale(1.2);
+}
+
 
 .Genero .boxes .box {
   display: flex;
