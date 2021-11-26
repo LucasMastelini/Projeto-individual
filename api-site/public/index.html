@@ -9,12 +9,15 @@
     <link rel="icon" href="./assets/img/alvo.png">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/sidebar.css">
+    <link rel="import" href="./js/funcoes.js">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    
 </head>
 
 
 
-<body>
+<body onload="validarSessao()">
+
     <div class="sidebar">
         <div class="logo_content">
             <div class="logo">
@@ -31,21 +34,21 @@
                 </a>
                 <span class="tooltip">Home</span>
             </li>
-            <li>
+            <li id="fechar_cadastro">
                 <a href="cadastro_lucas.html">
                     <i class='bx bx-user-plus'></i>
                     <span class="links_name">Cadastro</span>
                 </a>
                 <span class="tooltip">Cadastro</span>
             </li>
-            <li>
-                <a href="">
+            <li id="fechar_login">
+                <a href="./login_lucas.html">
                     <i class='bx bx-log-in'></i>
                     <span class="links_name">Login</span>
                 </a>
                 <span class="tooltip">Login</span>
             </li>
-            <li>
+            <li id="fechar_vazio">
             </li>
             <li>
                 <a href="">
@@ -71,23 +74,25 @@
             <li>
                 <a href="">
                     <i class='bx bx-log-out-circle'></i>
-                    <span class="links_name">Log-out</span>
+                    <span onclick="limparSessao" class="links_name" >Log-out</span>
                 </a>
                 <span class="tooltip">Log-out</span>
             </li>
         </ul>
         <div class="profile_content">
-            <!-- <div class="profile">
+            <div class="profile" id="profile">
                 <div class="profile_details">
                     <img src="./assets/imgs/pessoa3.png" alt="">
                     <div class="name_job">
-                        <div class="name">Lucas Mastelini</div>
-                        <div class="job">DEV</div>
+                        <div class="job">Bem-vindo</div>
+                        <div class="name" id="nick"></div>
                     </div>
-                </div> -->
+                </div>
+            </div>
         </div>
     </div>
-    </div>
+
+
 
 
     <div>
@@ -108,49 +113,49 @@
             </div>
             <div class="box">
                 <div class="filho">
-            <h4>FPS significa Frames Per Second ou, em português, Quadros por Segundo.
-                Qualquer ação que visualizamos em filmes,
-                vídeos ou jogos é composta por frames. São nada mais do que fotos sequenciais que,
-                ao serem reproduzidas em velocidade, viram animações.</h4>
-        
-                
-                        <p> Muitos se preocupam se a imagem de um
-                            filme ou vídeo é em HD ou Full HD,
-                            porém não é só isso que determina a qualidade de cena. Existe um outro fator, muito
-                            conhecido
-                            por estudantes de cinema,
-                            comunicação e gamers, que se chama FPS (Frames Per Second ou Quadros por Segundo). Qualquer
-                            ação
-                            que visualizamos em filmes,
-                            vídeos ou jogos é composta por frames.
-                            Eles são nada mais do que imagens sequenciais que, ao serem reproduzidas em velocidade, dão
-                            a
-                            sensação de movimento.
-                        </p>
-                        <p>
-                            Vídeos com o FPS baixo passam a impressão de que a sequência sofre inúmeras quebras na
-                            evolução,
-                            e
-                            às vezes deixam a sensação de que foram deixados "rastros". Já em filmes com um número maior
-                            de
-                            quatros por segundo (acima de 60), isso dá lugar a um plano limpo.
+                    <h4>FPS significa Frames Per Second ou, em português, Quadros por Segundo.
+                        Qualquer ação que visualizamos em filmes,
+                        vídeos ou jogos é composta por frames. São nada mais do que fotos sequenciais que,
+                        ao serem reproduzidas em velocidade, viram animações.</h4>
 
-                            No caso dos jogos não é diferente e, para aqueles que desejam comandos em tempo real, uma
-                            alta
-                            taxa
-                            de FPS é indispensável. O mais comum usado hoje são 30 quadros por segundo, mas o ideal
-                            seriam
-                            60.
-                            Em games pesados, você precisa ter um hardware extremamente potente para aguentar um número
-                            de
-                            FPS
-                            alto sem abrir mão de bons gráficos.
-                        </p>
-                    </div>
 
+                    <p> Muitos se preocupam se a imagem de um
+                        filme ou vídeo é em HD ou Full HD,
+                        porém não é só isso que determina a qualidade de cena. Existe um outro fator, muito
+                        conhecido
+                        por estudantes de cinema,
+                        comunicação e gamers, que se chama FPS (Frames Per Second ou Quadros por Segundo). Qualquer
+                        ação
+                        que visualizamos em filmes,
+                        vídeos ou jogos é composta por frames.
+                        Eles são nada mais do que imagens sequenciais que, ao serem reproduzidas em velocidade, dão
+                        a
+                        sensação de movimento.
+                    </p>
+                    <p>
+                        Vídeos com o FPS baixo passam a impressão de que a sequência sofre inúmeras quebras na
+                        evolução,
+                        e
+                        às vezes deixam a sensação de que foram deixados "rastros". Já em filmes com um número maior
+                        de
+                        quatros por segundo (acima de 60), isso dá lugar a um plano limpo.
+
+                        No caso dos jogos não é diferente e, para aqueles que desejam comandos em tempo real, uma
+                        alta
+                        taxa
+                        de FPS é indispensável. O mais comum usado hoje são 30 quadros por segundo, mas o ideal
+                        seriam
+                        60.
+                        Em games pesados, você precisa ter um hardware extremamente potente para aguentar um número
+                        de
+                        FPS
+                        alto sem abrir mão de bons gráficos.
+                    </p>
                 </div>
 
-            
+            </div>
+
+
         </div>
     </div>
 
@@ -162,48 +167,50 @@
             <div class="wall">
                 <div class="subtititulo">
                     <span>
-                        Os jogos FPS fazem parte de um dos gêneros mais populares da indústria dos games, movimentando
-                        milhões de dólares todos os anos. A origem do gênero vem dos primeiros jogos em primeira pessoa
+                        Os jogos FPS fazem parte de um dos gêneros mais populares da indústria dos games,
+                        movimentando
+                        milhões de dólares todos os anos. A origem do gênero vem dos primeiros jogos em primeira
+                        pessoa
                         ainda nos anos 1980, mas foram os títulos lançados na década seguinte que definiram suas
                         convenções,
                         seguidas até hoje.
 
                     </span>
                 </div>
-                
-                    <div class="box">
-                        <p>Os jogos FPS (ou First-Person Shooters, em inglês) são exatamente o que o nome descreve:
-                            jogos em que a visão do personagem é em primeira pessoa e a mesma do jogador, para maior
-                            imersão.
-                            Títulos do gênero são geralmente focados em tiro,
-                            ação com armas de fogo ou brancas para combate corpo a corpo, com algumas variações.</p>
-                    </div>
 
-                    <div class="box">
-                        <p>As principais características de um jogo FPS são a visão ampla do personagem,
-                            colocando o jogador em sua posição no mapa e permitindo a visualização de todo o ambiente à
-                            sua
-                            volta,
-                            o foco no combate, preferencialmente com armas de fogo mas também pode incluir armas de
-                            combate
-                            corpo a corpo,
-                            e grande quantidade de inimigos a serem combatidos. Caso o jogo seja um multiplayer,
-                            os jogadores se organizam em times que se enfrentam, até que um lado saia como vencedor.</p>
-                    </div>
-                    <div class="box">
-                        <p>Por via de regra, o jogador não é capaz de ver o personagem que controla por completo,
-                            exceto em momentos-chave como cutscenes,
-                            ou usando elementos de cenário que sirvam como espelhos.
-                            As únicas partes visíveis são as mãos em geral, portando as armas e/ou equipamentos que você
-                            tem
-                            à disposição.</p>
-                    </div>
+                <div class="box">
+                    <p>Os jogos FPS (ou First-Person Shooters, em inglês) são exatamente o que o nome descreve:
+                        jogos em que a visão do personagem é em primeira pessoa e a mesma do jogador, para maior
+                        imersão.
+                        Títulos do gênero são geralmente focados em tiro,
+                        ação com armas de fogo ou brancas para combate corpo a corpo, com algumas variações.</p>
                 </div>
 
-
-
+                <div class="box">
+                    <p>As principais características de um jogo FPS são a visão ampla do personagem,
+                        colocando o jogador em sua posição no mapa e permitindo a visualização de todo o ambiente à
+                        sua
+                        volta,
+                        o foco no combate, preferencialmente com armas de fogo mas também pode incluir armas de
+                        combate
+                        corpo a corpo,
+                        e grande quantidade de inimigos a serem combatidos. Caso o jogo seja um multiplayer,
+                        os jogadores se organizam em times que se enfrentam, até que um lado saia como vencedor.</p>
+                </div>
+                <div class="box">
+                    <p>Por via de regra, o jogador não é capaz de ver o personagem que controla por completo,
+                        exceto em momentos-chave como cutscenes,
+                        ou usando elementos de cenário que sirvam como espelhos.
+                        As únicas partes visíveis são as mãos em geral, portando as armas e/ou equipamentos que você
+                        tem
+                        à disposição.</p>
+                </div>
             </div>
+
+
+
         </div>
+    </div>
     </div>
     </div>
 
@@ -222,5 +229,41 @@
     btn.onclick = function () {
         sidebar.classList.toggle('active');
     }
+</script>
+<script>
 
+function validarSessao() {
+
+
+var email= sessionStorage.EMAIL_USUARIO;
+var nome= sessionStorage.NOME_USUARIO;
+var nickName = sessionStorage.nickName_USUARIO;
+
+var h1LoginUsuario = document.getElementById("h1_login_usuario");
+
+if (email != null && nome != null) {
+    window.alert(`Seja bem-vindo, ${nickName}!`);
+    profile.innerHTML.style.visibility = "visible" ;
+    fechar_cadastro.innerHTML.style.display = "none";
+    fechar_login.innerHTML.style.display = "none";
+    fechar_vazio.innerHTML.style.display = "none";
+    nick.innerHTML = `${nickName}`;
+    if (h1LoginUsuario != undefined) {
+        h1LoginUsuario.innerHTML = email;
+    }
+
+    
+    
+
+
+} else {
+    window.location = "./login_lucas.html";
+    ;
+}
+}
+    function limparSessao() {
+    
+    sessionStorage.clear();
+    window.location = "../login.html";
+}
 </script>

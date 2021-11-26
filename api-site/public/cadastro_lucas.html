@@ -30,21 +30,21 @@
                 </a>
                 <span class="tooltip">Home</span>
             </li>
-            <li>
+            <li id="fechar_cadastro">
                 <a href="cadastro_lucas.html">
                     <i class='bx bx-user-plus'></i>
                     <span class="links_name">Cadastro</span>
                 </a>
                 <span class="tooltip">Cadastro</span>
             </li>
-            <li>
-                <a href="">
+            <li id="fechar_login">
+                <a href="./login_lucas.html">
                     <i class='bx bx-log-in'></i>
                     <span class="links_name">Login</span>
                 </a>
                 <span class="tooltip">Login</span>
             </li>
-            <li>
+            <li id="fechar_vazio">
             </li>
             <li>
                 <a href="">
@@ -77,13 +77,13 @@
         </ul>
         <div class="profile_content">
             <div class="profile">
-                <!-- <div class="profile_details">
+                <div class="profile_details">
                     <img src="./assets/imgs/pessoa3.png" alt="">
                     <div class="name_job">
                         <div class="name">Lucas Mastelini</div>
                         <div class="job">DEV</div>
                     </div>
-                </div> -->
+                </div> 
             </div>
         </div>
     </div>
@@ -177,7 +177,7 @@
 
             if (resposta.ok) {
                 window.alert("Cadastro realizado com sucesso!");
-                window.location = "cadastro_lucas.html";
+                window.location = "./login_lucas.html";
                 limparFormulario();
                     
             } else {
@@ -189,20 +189,6 @@
     }
 
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <script>
     var btn = document.querySelector('#btn');

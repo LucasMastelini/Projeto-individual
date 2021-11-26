@@ -150,11 +150,12 @@ body {
   align-self: center;
   justify-self: center;
   text-align: center;
-  color: #fa6900;
+  color: #fff;
   margin: 0;
   transition: transform 1s;
   transform: translateX(0) scale(0.5);
   transition: all 1499ms ease;
+  cursor: pointer;
 }
 
 .social h2:hover {
@@ -165,11 +166,11 @@ body {
   align-self: center;
   justify-self: center;
   text-align: center;
-  color: #f38630;
+  color: #fff;
   margin: 0;
   transform: translateX(10px) scale(1.2);
   transition: all 1500ms ease;
-
+  cursor: pointer;
 }
 
 .social .boxes {
@@ -229,7 +230,7 @@ body {
   align-self: center;
   justify-self: center;
   text-align: center;
-  color: #f38630;
+  color: #fff;
   margin: 0;
   font-size: 30px;
   transition: transform 1s;
@@ -245,7 +246,7 @@ body {
   align-self: center;
   justify-self: center;
   text-align: center;
-  color: #f38630;
+  color: #fff;
   margin: 0;
   font-size: 30px;
   transform: translateX(10px) scale(1.2);
