@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/sidebar.css">
     <link rel="import" href="./js/funcoes.js">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    
+
 </head>
 
 
@@ -28,7 +28,7 @@
         </div>
         <ul class="nav_list">
             <li>
-                <a href="index.html">
+                <a href="index.html#banner">
                     <i class='bx bx-user'></i>
                     <span class="links_name">Home</span>
                 </a>
@@ -51,28 +51,28 @@
             <li id="fechar_vazio">
             </li>
             <li>
-                <a href="primeira">
-                    <i class='bx bx-joystick'></i>
+                <a href="index.html#primeira">
+                    <i class='bx bx-question-mark'></i>
                     <span class="links_name">FPS</span>
                 </a>
                 <span class="tooltip">FPS</span>
             </li>
             <li>
-                <a href="segunda">
-                    <i class='bx bx-joystick'></i>
+                <a href="index.html#segunda">
+                    <i class='bx bx-book-content'></i>
                     <span class="links_name">Genero</span>
                 </a>
                 <span class="tooltip">Genero</span>
             </li>
             <li>
-                <a href="">
+                <a href="index.html#cards">
                     <i class='bx bx-joystick'></i>
                     <span class="links_name">Jogos</span>
                 </a>
                 <span class="tooltip">Jogos</span>
             </li>
             <li>
-                <a href="">
+                <a href="index.html#graph">
                     <i class='bx bx-line-chart'></i>
                     <span class="links_name">Ranking</span>
                 </a>
@@ -88,7 +88,7 @@
             <li>
                 <a href="" onclick="limparSessao()">
                     <i class='bx bx-log-out-circle'></i>
-                    <span onclick="limparSessao" class="links_name" >Log-out</span>
+                    <span onclick="limparSessao" class="links_name">Log-out</span>
                 </a>
                 <span class="tooltip">Log-out</span>
             </li>
@@ -110,7 +110,7 @@
 
 
     <div>
-        <div class="banner">
+        <div class="banner" id='banner'>
             <div class="container">
                 <p>
                     A entrada de um <span>Novo Universo Empolgante</span>.
@@ -120,9 +120,9 @@
         </div>
     </div>
 
-    <div class="social" id='primeira'>
+    <div class="social" >
         <div class="container">
-            <div class="titulo">
+            <div class="titulo" id='primeira'>
                 <h2>O'que é FPS</h2>
             </div>
             <div class="box">
@@ -173,13 +173,14 @@
         </div>
     </div>
 
-    <div class="Genero" id="segunda">
+    <div class="Genero" >
         <div class="container">
-            <div class="titulo">
+            <div class="titulo"id="segunda">
                 <h2>Genero</h2>
             </div>
-            <div class="wall">
-                <div class="subtititulo">
+            <div class="box">
+                <div class="wall">
+                    <!-- <div class="subtititulo"> -->
                     <span>
                         Os jogos FPS fazem parte de um dos gêneros mais populares da indústria dos games,
                         movimentando
@@ -190,36 +191,38 @@
                         seguidas até hoje.
 
                     </span>
-                </div>
+                    <!-- </div> -->
 
-                <div class="box">
-                    <p>Os jogos FPS (ou First-Person Shooters, em inglês) são exatamente o que o nome descreve:
-                        jogos em que a visão do personagem é em primeira pessoa e a mesma do jogador, para maior
-                        imersão.
-                        Títulos do gênero são geralmente focados em tiro,
-                        ação com armas de fogo ou brancas para combate corpo a corpo, com algumas variações.</p>
-                </div>
+                    <div class="box">
+                        <p>Os jogos FPS (ou First-Person Shooters, em inglês) são exatamente o que o nome descreve:
+                            jogos em que a visão do personagem é em primeira pessoa e a mesma do jogador, para maior
+                            imersão.
+                            Títulos do gênero são geralmente focados em tiro,
+                            ação com armas de fogo ou brancas para combate corpo a corpo, com algumas variações.</p>
+                    </div>
 
-                <div class="box">
-                    <p>As principais características de um jogo FPS são a visão ampla do personagem,
-                        colocando o jogador em sua posição no mapa e permitindo a visualização de todo o ambiente à
-                        sua
-                        volta,
-                        o foco no combate, preferencialmente com armas de fogo mas também pode incluir armas de
-                        combate
-                        corpo a corpo,
-                        e grande quantidade de inimigos a serem combatidos. Caso o jogo seja um multiplayer,
-                        os jogadores se organizam em times que se enfrentam, até que um lado saia como vencedor.</p>
-                </div>
-                <div class="box">
-                    <p>Por via de regra, o jogador não é capaz de ver o personagem que controla por completo,
-                        exceto em momentos-chave como cutscenes,
-                        ou usando elementos de cenário que sirvam como espelhos.
-                        As únicas partes visíveis são as mãos em geral, portando as armas e/ou equipamentos que você
-                        tem
-                        à disposição.</p>
+                    <div class="box">
+                        <p>As principais características de um jogo FPS são a visão ampla do personagem,
+                            colocando o jogador em sua posição no mapa e permitindo a visualização de todo o ambiente à
+                            sua
+                            volta,
+                            o foco no combate, preferencialmente com armas de fogo mas também pode incluir armas de
+                            combate
+                            corpo a corpo,
+                            e grande quantidade de inimigos a serem combatidos. Caso o jogo seja um multiplayer,
+                            os jogadores se organizam em times que se enfrentam, até que um lado saia como vencedor.</p>
+                    </div>
+                    <div class="box">
+                        <p>Por via de regra, o jogador não é capaz de ver o personagem que controla por completo,
+                            exceto em momentos-chave como cutscenes,
+                            ou usando elementos de cenário que sirvam como espelhos.
+                            As únicas partes visíveis são as mãos em geral, portando as armas e/ou equipamentos que você
+                            tem
+                            à disposição.</p>
+                    </div>
                 </div>
             </div>
+
 
 
 
@@ -228,7 +231,41 @@
     </div>
     </div>
 
-    <section>
+    <section class="show">
+
+        <div class="cards" id="cards">
+
+
+
+
+
+        </div>
+
+
+        <div class="dashboard" >
+            <div class='container'>
+                <div class='boxes' id="graph">
+                    <h1>Ranqueamento de Jogos</h1>
+
+
+
+                    <div>
+                        <section>
+                            <h1>Ranking</h1>
+                            <h2>Votos: </h2>
+                        </section>
+                        <section style="width:100%">
+                            <canvas id="chart"></canvas>
+                            <section>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
 
     </section>
 
@@ -246,30 +283,108 @@
 </script>
 <script>
 
-function validarSessao() {
+    function validarSessao() {
 
 
-var email= sessionStorage.EMAIL_USUARIO;
-var nome= sessionStorage.NOME_USUARIO;
-var nickName = sessionStorage.nickName_USUARIO;
+        var email = sessionStorage.EMAIL_USUARIO;
+        var nome = sessionStorage.NOME_USUARIO;
+        var nickName = sessionStorage.nickName_USUARIO;
 
-var h1LoginUsuario = document.getElementById("h1_login_usuario");
+        var h1LoginUsuario = document.getElementById("h1_login_usuario");
 
-if (email != null && nome != null) {
-    window.alert(`Seja bem-vindo, ${nickName}!`);
-    profile.style.visibility = "visible" ;
-    fechar_cadastro.style.display = "none";
-    fechar_login.style.display = "none";
-    fechar_vazio.style.display = "none";
-    nick.innerHTML = `${nickName}`;
-    if (h1LoginUsuario != undefined) {
-        h1LoginUsuario.innerHTML = email;
+        if (email != null && nome != null) {
+            window.alert(`Seja bem-vindo, ${nickName}!`);
+            profile.style.visibility = "visible";
+            fechar_cadastro.style.display = "none";
+            fechar_login.style.display = "none";
+            fechar_vazio.style.display = "none";
+            nick.innerHTML = `${nickName}`;
+            if (h1LoginUsuario != undefined) {
+                h1LoginUsuario.innerHTML = email;
+            }
+        }
     }
-}
-}
     function limparSessao() {
-    
-    sessionStorage.clear();
-    window.location = "../login.html";
-}
+
+        sessionStorage.clear();
+        window.location = "../login.html";
+    }
+</script>
+<script>
+
+var context = document.getElementById("chart").getContext("2d");
+		context.canvas.width = 1000;
+		context.canvas.height = 300;
+        
+        var configuration = {
+			type: 'bar',
+			data: {
+				datasets: [{
+					label: "Temperatura x Tempo",
+					type: 'bar',
+					borderColor: ['#ff3232'],
+					backgroundColor: ['#ff7f7f']
+				}]
+			},
+			options: {
+				scales: {
+					xAxes: [{
+						distribution: 'series',
+                        ticks: {
+                            beginAtZero:true
+                        }
+					}],
+					yAxes: [{
+						scaleLabel: {
+							display: true,
+							labelString: 'Temperature'
+                        },
+                        ticks: {
+                            beginAtZero:true
+                        }
+					}]
+				},
+				animation: {
+					duration: 0
+				}
+			}
+        };
+        
+		var chart = new Chart(context, configuration);
+
+        //Função para obter os dados de temperatura do server
+               
+        //Esse atributo dentro do contexto serve para saber qual foi o último índice processado, assim eliminado os outros elementos na
+        //hora de montar/atualizar o gráfico
+        this.lastIndexTemp = 0;
+        this.time = 0;
+
+        function get_data(){
+			
+            var http = new XMLHttpRequest();
+            http.open('GET', 'http://localhost:3000/api/temperature', false);
+            http.send(null);        
+			
+            var obj = JSON.parse(http.responseText);
+            if (obj.data.length == 0){
+                return;
+            }
+
+            var _lastIndexTemp = this.lastIndexTemp;
+            this.lastIndexTemp = obj.data.length;
+            listTemp = obj.data.slice(_lastIndexTemp);
+		
+            listTemp.forEach(data => {
+                //Máximo de 60 itens exibidos no gráfico
+                if (chart.data.labels.length == 10 && chart.data.datasets[0].data.length == 10){
+                    chart.data.labels.shift();
+                    chart.data.datasets[0].data.shift();
+                }
+                chart.data.labels.push(this.time++);
+                chart.data.datasets[0].data.push(parseFloat(data));
+                chart.update();
+			});
+			
+			document.getElementById('average').textContent = obj.average;
+		} 
 </script>

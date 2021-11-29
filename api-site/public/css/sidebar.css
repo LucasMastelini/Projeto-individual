@@ -81,7 +81,7 @@
   }
   
   .sidebar ul {
-    margin-top: 20px;
+    margin-top: -10px;
     padding-left: 5px;
 }
   
@@ -231,7 +231,7 @@
     width: 100%;
   }
   .sidebar .profile_content #profile{
-    visibility: hidden;
+    visibility: visible;
   }
   
   .sidebar .profile_content .profile {
@@ -258,12 +258,14 @@
     pointer-events: none;
     white-space: nowrap;
     transition: all 0.3s ease;
+    
   }
   
   .sidebar.active .profile .profile_details {
     opacity: 1;
     pointer-events: auto;
     transition: all 0.3s ease;
+    padding-top: 10%;
   }
   
   .profile .profile_details img {

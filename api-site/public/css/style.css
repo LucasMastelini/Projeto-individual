@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+  }
 
   ::-webkit-scrollbar {
     width: 0;
@@ -38,7 +38,7 @@ body {
   margin-left: 0%;
   background-repeat: no-repeat;
   background-position: center;
-  
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -73,14 +73,16 @@ body {
 .social {
   display: flex;
   background-color: #e6ddddcc;
-  padding: 50px 0;
+  padding: -50px 0;
   width: 100%;
   margin-left: 0%;
-  height: auto;
+  height: 160vh;
   background-color: black;
   background-image: url('../assets/img/fundo.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  transition: all 1s ease;
+  scroll-behavior: smooth;
 }
 
 .social .container {
@@ -130,9 +132,7 @@ body {
   background: rgb(6,2,79);
   background: linear-gradient(90deg, rgba(6,2,79,0.7580429248595506) 0%, rgba(34,31,124,0.8563575316011236) 50%, rgba(6,2,79,0.7608519136235955) 84%);
   color: #ffffff;
-  
   left: 0%;
-  
   border-radius: 20px;  
 }
 
@@ -192,12 +192,9 @@ body {
 
 .Genero {
   display: flex;
-  background-color: #e6ddddcc;
   padding: 50px 0;
   width: 100%;
-
-  height: auto;
-  background-image: linear-gradient(white);
+  height: 145vh;
   background-image: url('../assets/img/ed-laag-volcaniccatwalk-cropped-v004.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -211,15 +208,32 @@ body {
 }
 
 .Genero .container .wall {
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  right: -100%;
+  transform-origin: right;
+  transition: right 1000ms;
   background: rgb(6,2,79);
-  background: linear-gradient(90deg, rgba(6,2,79,0.7580429248595506) 0%, rgba(34,31,124,0.8563575316011236) 50%, rgba(6,2,79,0.7608519136235955) 84%);  
+  background: linear-gradient(90deg, rgba(6,2,79,0.7580429248595506) 0%, rgba(34,31,124,0.8563575316011236) 50%, rgba(6,2,79,0.7608519136235955) 84%);
+  border-radius: 20px;  
+}
+
+.box:hover .wall{
+  background: rgb(6,2,79);
+  background: linear-gradient(90deg, rgba(6,2,79,0.7580429248595506) 0%, rgba(34,31,124,0.8563575316011236) 50%, rgba(6,2,79,0.7608519136235955) 84%);
+  right: 0%;
   border-radius: 20px;
 }
 
 .Genero .titulo {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 
 .Genero h2 {
@@ -285,4 +299,66 @@ body {
   margin-top: 5%;
   margin-bottom: 10%;
   font-size: 22px;
+}
+
+.show{
+  background-image: url('../assets/img/fundo_cards.jpg');
+  background-size: cover;
+  width: 100vw;
+  height: 220vh;
+  margin-left: 0%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.Genero .container .box{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.Genero .container .box:hover {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+
+ .sicial #primeira{
+  transition: all 1s ease;
+  scroll-behavior: smooth;
+}
+
+/* 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 */
+
+.dashboard{
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+}
+.dashboard .container{
+  width: 80%;
+  align-self: center;
+  height: 100%;
+}
+.dashboard .boxes{
+  margin-left: 15%;
+   margin-top: 70%;
+   height: 90vh;
+   width: 75%;
+   padding: 30px;
+   border-radius: 15px;
+   border-radius: 15px;
+   background-color: #c7c7c773;
+}
+.boxes h1{
+   text-align: center;
+   margin-bottom: 13px;
 }
