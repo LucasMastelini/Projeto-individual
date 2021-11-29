@@ -80,14 +80,14 @@
                 </a>
                 <span class="tooltip">Ranking</span>
             </li>
-            <li>
+            <!-- <li>
                 <a href="">
                     <i class='bx bx-cog'></i>
                     <span class="links_name">Configurações</span>
                 </a>
                 <span class="tooltip">Configurações</span>
-            </li>
-            <li>
+            </li> -->
+            <li id="sair">
                 <a href="" onclick="limparSessao()">
                     <i class='bx bx-log-out-circle'></i>
                     <span onclick="limparSessao" class="links_name">Log-out</span>
@@ -233,7 +233,7 @@
     </div>
     </div>
 
-    <section class="show">
+    <section class="show" id="conteudo_log">
 
         <div class="cards" id="cards">
 
@@ -294,15 +294,21 @@
 
         var h1LoginUsuario = document.getElementById("h1_login_usuario");
 
+
         if (email != null && nome != null) {
             window.alert(`Seja bem-vindo, ${nickName}!`);
             profile.style.visibility = "visible";
             fechar_cadastro.style.display = "none";
             fechar_login.style.display = "none";
             fechar_vazio.style.display = "none";
+            sair.style.display = "block";
+            conteudo_log.style.display = "block";
+            
+
             nick.innerHTML = `${nickName}`;
             if (h1LoginUsuario != undefined) {
                 h1LoginUsuario.innerHTML = email;
+               
             }
         }
     }
@@ -311,6 +317,8 @@
         sessionStorage.clear();
         window.location = "../login.html";
     }
+
+
 </script>
 <script>
 
