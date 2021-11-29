@@ -305,7 +305,7 @@ body {
   background-image: url('../assets/img/fundo_cards.jpg');
   background-size: cover;
   width: 100vw;
-  height: 220vh;
+  height: 180vh;
   margin-left: 0%;
   background-repeat: no-repeat;
   background-position: center;
@@ -336,7 +336,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/* 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 */
+/* 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*/
 
 .dashboard{
   height: 100vh;
@@ -350,8 +350,8 @@ body {
 }
 .dashboard .boxes{
   margin-left: 15%;
-   margin-top: 70%;
-   height: 90vh;
+   margin-top: 60%;
+   height: 50vh;
    width: 75%;
    padding: 30px;
    border-radius: 15px;
