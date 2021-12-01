@@ -441,9 +441,9 @@ main span{
 
 
 #CS{
-  background-image: url('../assets/img/csgo2.jpg');
+  background-image: url('../assets/img/csgo3.jpg');
   background-size: cover ;
-  background-position-x: 35%;
+  background-position-x: 63%;
   background-repeat: no-repeat;
   border-radius: 10px;
   transition: all 1.5s ease;
@@ -451,12 +451,13 @@ main span{
 }
 
 #CS:hover{
-  background-image: url('../assets/img/csgo2.jpg');
+  background-image: url('../assets/img/csgo3.jpg');
   background-size: cover ;
   background-position-x: 63%;
+  background-position-y: 100%;
   background-repeat: no-repeat;
   border-radius: 10px;
-  transform: translateX(10px) scale(1.2);
+  transform: translateX(10px) scale(1.1);
   transition: all 2s ease;
 }
 
