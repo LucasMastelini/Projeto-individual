@@ -4,6 +4,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Cinzel Decorative', cursive;
+  box-sizing: border-box;
+  /* display: flex; */
   }
 
   ::-webkit-scrollbar {
@@ -20,13 +22,7 @@ body {
     border-radius: 100px;
 }
 
-/* cores para o site
-#fa6900 laranja escuro
-#f38630 laranja claro
-#e0e4cc off white
-#a7dbd8 azul claro
-#69d2e7 azul céu  
-*/
+
 
 
 .banner {
@@ -180,7 +176,7 @@ body {
 
 
 .social h4 {
-  color: #ff0163;
+  color: #fa6900;
   font-weight: 600;
   font-size: 25px;
 }
@@ -287,22 +283,13 @@ body {
   display: flex;
   width: 100%;
   font-weight: 600;
-  color: #ff0163;
+  color: #fa6900;
   justify-content: center;
   margin-top: 5%;
   margin-bottom: 10%;
-  font-size: 22px;
+  font-size: 21px;
 }
 
-.show{
-  background-image: url('../assets/img/fundo_cards.jpg');
-  background-size: cover;
-  width: 100vw;
-  height: 220vh;
-  margin-left: 0%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
 
 .Genero .container .box{
@@ -325,17 +312,29 @@ body {
   transition: all 0.5s ease;
 }
 
- .sicial #primeira{
+.sicial #primeira{
   transition: all 1s ease;
   scroll-behavior: smooth;
 }
 
 /*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*/
 
+.show{
+  background-image: url('../assets/img/fundo_cards.jpg');
+  background-size: cover;
+  width: 100vw;
+  height: 226vh;
+  margin-left: 0%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+}
+
 .dashboard{
   height: 100vh;
   display: flex;
   justify-content: flex-end;
+  
 }
 .dashboard .container{
   width: 80%;
@@ -343,8 +342,7 @@ body {
   height: 100%;
 }
 .dashboard .boxes{
-   margin-left: 15%;
-   margin-top: 60%;
+   margin-left: 5%;
    height: 90vh;
    width: 75%;
    padding: 30px;
@@ -358,5 +356,182 @@ body {
 }
 
 #conteudo_log {
-  display: none;
+  display: block;
 }
+
+.show .container{
+  padding: 5%;
+  padding-left: 0px;
+  margin-left: 18%;
+}
+
+.show  .container .cards .card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: flex-start;
+  flex-wrap: nowrap;
+  padding: 5%;
+}
+
+.show .cards .card {
+  margin: 1%;
+  margin-right: 2px;
+  
+  
+}
+
+main h3{
+  visibility: hidden;
+}
+
+main.cards{
+  display: flex;
+  color: #fa6900;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+main button{
+  cursor: pointer;
+  margin-top: 30%;
+  max-width: 60px;
+}
+
+main span{
+  max-width: 500px;
+}
+
+ #R6{
+  background-image: url('../assets/img/capa.r63.jpg');
+  background-size: cover ;
+  background-position-x: 20%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  transition: all 1.5s ease;
+}
+ 
+#R6:hover{
+  background-image: url('../assets/img/capa.r63.jpg');
+  background-size: cover ;
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  /* transform: translateX(10px) scale(1.2); */
+  transition: all 2s ease;
+}
+
+
+#CS{
+  background-image: url('../assets/img/csgo2.jpg');
+  background-size: cover ;
+  background-position-x: 35%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  transition: all 1.5s ease;
+}
+
+#CS:hover{
+  background-image: url('../assets/img/csgo2.jpg');
+  background-size: cover ;
+  background-position-x: 63%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  /* transform: translateX(10px) scale(1.2); */
+  transition: all 2s ease;
+}
+
+#vava{
+ background-image: url('../assets/img/capa_valorant2.jpg');
+ background-size: cover;
+ background-position-x: 40%;
+ background-repeat: no-repeat;
+ color: #fff;
+ border-radius: 10px;
+ transition: all 1.5s ease;
+}
+
+#vava:hover{
+ background-image: url('../assets/img/capa_valorant2.jpg');
+ background-size: cover;
+ background-position-x: 100%;
+ background-repeat: no-repeat;
+ color: #fa6900;
+ border-radius: 10px;
+ /* transform: translateX(10px) scale(1.2); */
+  transition: all 2s ease;
+}
+
+#over{
+  background-image: url('../assets/img/capa-overwatch.jpg');
+  background-size: cover;
+  background-position-x: 0%;
+  background-repeat: no-repeat;
+  color: #000000;
+  border-radius: 10px;
+  transition: all 1.5s ease;
+}
+
+#over:hover{
+  background-image: url('../assets/img/capa-overwatch.jpg');
+  background-size: cover;
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+  color: #000000;
+  border-radius: 10px;
+  /* transform: translateX(10px) scale(1.2); */
+  transition: all 2s ease;
+}
+
+ #cod{
+  background-image: url('../assets/img/Capa-cod-warzone.jpg');
+  background-size: cover;
+  background-position-x: 10%;
+  background-repeat: no-repeat;
+  color: #fa6900;
+  border-radius: 10px;
+  transition: all 1.5s ease;
+ }
+  
+ #cod:hover{
+  background-image: url('../assets/img/Capa-cod-warzone.jpg');
+  background-size: cover;
+  background-position-x: 80%;
+  background-repeat: no-repeat;
+  color: #fa6900;
+  border-radius: 10px;
+  /* transform: translateX(10px) scale(1.2); */
+  transition: all 2s ease;
+}
+
+
+#fort{
+ background-image: url('../assets/img/Fortnite.png');
+ background-size: cover;
+ background-position-x: 25%;
+ background-repeat: no-repeat;
+ color: #000000;
+ border-radius: 10px;
+ transition: all 1.5s ease;
+}
+
+#fort:hover{
+ background-image: url('../assets/img/Fortnite.png');
+ background-size: cover;
+ background-position-x: 80%;
+ background-repeat: no-repeat;
+ color: #fa6900;
+ border-radius: 10px;
+ /* transform: translateX(10px) scale(1.2); */
+  transition: all 2s ease;
+}
+
+/* cores para o site
+#fa6900 laranja escuro
+#f38630 laranja claro
+#e0e4cc off white
+#a7dbd8 azul claro
+#69d2e7 azul céu  
+*/
