@@ -1,60 +1,73 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AcquaTec | Cadastro</title>
-
-
-    <script src="./js/funcoes.js"></script>
-
-
-    <link rel="icon" href="./assets/icon/favicon.ico">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link rel="icon" href="./assets/img/alvo.png">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="stylesheet" href="./css/sidebar.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>OnlyFPS | Cadastro</title>
 </head>
-
 <body>
 
-    <!--header inicio-->
-    <div class="header">
-        <div class="container">
-            <h1>AcquaTec</h1>
-            <ul class="navbar">
-                <li>
-                    <a href="./index.html">
-                        Inicial
-                    </a>
-                </li>
-                <li>
-                    <a href="./simulador.html">Simulador</a>
-                </li>
-                <li>|</li>
-                <li>
-                    <a href="./login.html">Login</a>
-                </li>
-                <li class="agora">
-                    <a href="./cadastro.html">Cadastro</a>
-                </li>
-            </ul>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <img src="./assets/img/alvo.png" alt="">
+                <div class="logo_name">OnlyFPS</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+
+        <ul class="nav_list">
+            <li id="fechar_cadastro">
+                <a href="cadastro.html">
+                    <i class='bx bx-user-plus'></i>
+                    <span class="links_name">Cadastro</span>
+                </a>
+                <span class="tooltip">Cadastro</span>
+            </li>
+            <li id="fechar_login">
+                <a href="./login.html">
+                    <i class='bx bx-log-in'></i>
+                    <span class="links_name">Login</span>
+                </a>
+                <span class="tooltip">Login</span>
+            </li>
+            <li>
+                <a href="index.html">
+                    <i class='bx bx-user'></i>
+                    <span class="links_name">Home</span>
+                </a>
+                <span class="tooltip">Home</span>
+            </li>
+            <!-- <li id="fechar_vazio">
+            <a href="">
+                <i class='bx bx-cog'></i>
+                <span class="links_name">Configurações</span>
+            </a>
+            <span class="tooltip">Configurações</span>
+        </li> -->
+        </ul>
+        <div class="profile_content">
         </div>
     </div>
-    <!--header fim-->
 
     <div class="banner-login ">
         <div class="container ">
             <div class="card medio">
-                <h2>Bem-vindo!</h2>
+                <h2>Se torne um Recruta!
+                </h2>
                 <div class="formulario">
                     <div class="div_form">
                         Nome:
                         <input id="nome_input" type="text" placeholder="Ada Lovelace">
+                        <br>
+                        NickName:
+                        <input id="nickname_input" type="text" placeholder="meuemail@provedor.com">
                         <br>
                         E-mail:
                         <input id="email_input" type="text" placeholder="meuemail@provedor.com">
@@ -62,34 +75,15 @@
                         Senha:
                         <input id="senha_input" type="password" placeholder="******">
                         <br>
-                        Confirmação da Senha:
-                        <input id="confirmacao_senha_input" type="password" placeholder="******">
-                        <br>
                         <button class="btn" onclick="cadastrar()">Cadastrar</button>
                     </div>
                 </div>
-                <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
-                </div>
-
-                <div id="div_erros_login">
-
-                </div>
+                
             </div>
         </div>
     </div>
 
-    <!--footer inicio-->
-    <div class="footer">
-        <div class="container">
-            <h4>Feito com amor por um aluno BandTec &copy; 2021</h4>
-        </div>
-    </div>
-    <!--footer fim-->
-
-
 </body>
-
 </html>
 
 <script>
@@ -99,15 +93,15 @@
     }
 
     function cadastrar() {
-        aguardar();
+        
 
         var nomeVar = nome_input.value;
         var emailVar = email_input.value;
+        var NicknameVar = nickname_input.value;
         var senhaVar = senha_input.value;
-        var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
         // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        if (nomeVar == "" || emailVar == "" || NicknameVar == "" || senhaVar == "" ) {
 
             window.alert("Preencha todos os campos para prosseguir!");
             if (nomeVar == "") {
@@ -116,13 +110,14 @@
             if (emailVar == "") {
                 console.log('email está em branco')
             }
+            if (NicknameVar == "") {
+                console.log('NickName está em branco')
+            }
             if (senhaVar == "") {
                 console.log('senha está em branco')
             }
-            if (confirmacaoSenhaVar == "") {
-                console.log('confirmacaoSenha está em branco')
-            }
-            finalizarAguardar();
+            
+            
             return false;
         }
 
@@ -132,11 +127,6 @@
             return false;
         }
 
-        if (senhaVar != confirmacaoSenhaVar) {
-            window.alert("As senhas inseridas devem ser iguais para prosseguir!");
-            finalizarAguardar();
-            return false;
-        }
 
         fetch("/usuarios/cadastrar", {
             method: "POST",
@@ -145,6 +135,7 @@
             },
             body: JSON.stringify({
                 nome: nomeVar,
+                Nickname: NicknameVar,
                 email: emailVar,
                 senha: senhaVar,
             })
@@ -154,16 +145,25 @@
 
             if (resposta.ok) {
                 window.alert("Cadastro realizado com sucesso!");
-                window.location = "login.html";
+                window.location = "./login_lucas.html";
                 limparFormulario();
-                finalizarAguardar();
+                    
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
         });
     }
 
+</script>
+
+<script>
+    var btn = document.querySelector('#btn');
+    var sidebar = document.querySelector('.sidebar');
+
+    btn.onclick = function(){
+        sidebar.classList.toggle('active');
+    }
+   
 </script>

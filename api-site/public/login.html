@@ -1,77 +1,63 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyFPS | Login</title>
 
-    <title>AcquaTec | Login</title>
-
-    <script src="./js/funcoes.js"></script>
-
-    <link rel="icon" href="./assets/icon/favicon.ico">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="./assets/img/alvo.png">
+    <link rel="stylesheet" href="./css/sidebar.css">
+    <link rel="stylesheet" href="./css/login.css">
 </head>
 
 <body>
 
+
     <div class="sidebar">
         <div class="logo_content">
             <div class="logo">
-                <i class='bx bxl-codepen'></i>
+                <img src="./assets/img/alvo.png" alt="">
                 <div class="logo_name">OnlyFPS</div>
             </div>
             <i class='bx bx-menu' id="btn"></i>
         </div>
         <ul class="nav_list">
-            <li>
-                <a href="">
-                    <i class='bx bx-user'></i>
-                    <span class="links_name">Usuário</span>
+            <li id="fechar_login">
+                <a href="login.html">
+                    <i class='bx bx-log-in'></i>
+                    <span class="links_name">Login</span>
                 </a>
-                <span class="tooltip">Usuário</span>
+                <span class="tooltip">Login</span>
             </li>
-            <li>
-                <a href="">
-                    <i class='bx bxs-dashboard'></i>
+            <li id="fechar_cadastro">
+                <a href="cadastro.html">
+                    <i class='bx bx-user-plus'></i>
                     <span class="links_name">Cadastro</span>
                 </a>
                 <span class="tooltip">Cadastro</span>
             </li>
             <li>
-                <a href="">
-                    <i class='bx bxs-dashboard'></i>
-                    <span class="links_name">Login</span>
+                <a href="index.html">
+                    <i class='bx bx-user'></i>
+                    <span class="links_name">Home</span>
                 </a>
-                <span class="tooltip">Login</span>
+                <span class="tooltip">Home</span>
             </li>
-            <li>
+            <!-- <li>
                 <a href="">
-                    <i class='bx bx-analyse' ></i>
-                    <span class="links_name">Jogos</span>
+                    <i class='bx bx-cog'></i>
+                    <span class="links_name">Configurações</span>
                 </a>
-                <span class="tooltip">Jogos</span>
-            </li>
-            <li>
-                <a href="">
-                    <i class='bx bxs-dashboard'></i>
-                    <span class="links_name">Ranking</span>
-                </a>
-                <span class="tooltip">Ranking</span>
-            </li>
-            <li>
-            <a href="">
-                <i class='bx bx-cog'></i>
-                <span class="links_name">Configurações</span>
-            </a>
-            <span class="tooltip">Configurações</span>
-        </li>
+                <span class="tooltip">Configurações</span>
+            </li> -->
+            
         </ul>
+        <div class="profile_content">
+        </div>
+    </div>
 
     <div class="banner-login">
         <div class="container">
@@ -88,45 +74,23 @@
                         <button class="btn" onclick="entrar()">
                             Entrar
                         </button>
-                    </form>
+                        </form>
 
 
-                </div>
+                    </div>
 
-                <div id="div_aguardar" >
-                
-                </div>
+                    <div id="div_erros_login">
 
-                <div id="div_erros_login">
-
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!--footer inicio-->
-    <div class="footer">
-        <div class="container">
-            <h4>Feito com amor por um aluno BandTec &copy; 2021</h4>
-        </div>
-    </div>
-
-    <!-- modal?
-
-    <div id="div_modal" class="div-modal">
-        <div id="modal_backdrop" onclick="fecharModal()" class="modal-backdrop">
-        </div>
-        <div id="modal_container" class="modal-container">
-            <button onclick="fecharModal()">fechar modal</button>
-        </div>
-    </div> -->
 
 
 
 </body>
 
 </html>
-
 <script>
 
     function limparFormulario() {
@@ -134,7 +98,6 @@
     }
 
     function entrar() {
-        aguardar();
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
@@ -142,7 +105,6 @@
         // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
         if (emailVar == "" || senhaVar == "") {
             window.alert("Preencha todos os campos para prosseguir!");
-            finalizarAguardar();
             return false;
         }
 
@@ -177,7 +139,7 @@
 
 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        window.location = "index.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
@@ -188,7 +150,6 @@
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    finalizarAguardar(texto);
                 });
             }
 
@@ -197,6 +158,14 @@
         })
 
         return false;
+    }
+</script>
+<script>
+    var btn = document.querySelector('#btn');
+    var sidebar = document.querySelector('.sidebar');
+
+    btn.onclick = function () {
+        sidebar.classList.toggle('active');
     }
 
 </script>
