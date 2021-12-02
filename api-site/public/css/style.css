@@ -357,7 +357,7 @@ body {
 
 #conteudo_log {
   
-  display: block;
+  display: none;
 }
 
 .show .container{
@@ -377,7 +377,7 @@ body {
 }
 
 .show .cards .card {
-  margin: 7%;
+  margin: 5%;
   margin-right: 2px;
   display: flex;
  
@@ -386,13 +386,16 @@ body {
 
 main h3{
   visibility: hidden;
+  color: #fac800;
+  font-size:20px ;
+  font-weight: 900;
 }
 
 main.cards{
   display: flex;
   color: #fa6900;
   flex-direction: column;
-    flex-wrap: nowrap;
+  flex-wrap: nowrap;
   
 }
 
@@ -426,7 +429,7 @@ main span{
   background-repeat: no-repeat;
   border-radius: 10px;
   transition: all 1.5s ease;
-  height: 10vh;
+  height: 5vh;
   overflow: hidden;
 }
  
@@ -451,7 +454,7 @@ main span{
   background-repeat: no-repeat;
   border-radius: 10px;
   transition: all 1.5s ease;
-  height: 10vh;
+  height: 5vh;
   overflow: hidden;
 }
 
@@ -475,7 +478,7 @@ main span{
  color: #fff;
  border-radius: 10px;
  transition: all 1.5s ease;
- height: 10vh;
+ height: 5vh;
  overflow: hidden;
 }
 
@@ -500,7 +503,7 @@ main span{
   color: #000000;
   border-radius: 10px;
   transition: all 1.5s ease;
-  height: 10vh;
+  height: 5vh;
   overflow: hidden;
 }
 
@@ -525,7 +528,7 @@ main span{
   color: #fa6900;
   border-radius: 10px;
   transition: all 1.5s ease;
-  height: 10vh;
+  height: 5vh;
   overflow: hidden;
  }
   
@@ -551,7 +554,7 @@ main span{
  color: #000000;
  border-radius: 10px;
  transition: all 1.5s ease;
- height: 10vh;
+ height: 5vh;
  overflow: hidden;
 }
 
@@ -576,7 +579,7 @@ main span{
  color: #000000;
  border-radius: 10px;
  transition: all 1.3s ease;
- height: 10vh;
+ height: 5vh;
  overflow: hidden;
 }
 
@@ -601,7 +604,7 @@ main span{
  color: #000000;
  border-radius: 10px;
  transition: all 1.3s ease;
- height: 10vh;
+ height: 5vh;
  overflow: hidden;
 }
 

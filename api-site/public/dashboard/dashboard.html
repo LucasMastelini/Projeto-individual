@@ -110,7 +110,7 @@
 
     
     // só altere aqui se souber o que está fazendo!
-    function plotarGrafico(resposta) {
+    function plotarGrafico(resposta, votos) {
         console.log ('iniciando plotagem do gráfico...');
 
         var dados = {
@@ -130,7 +130,7 @@
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
             dados.labels.push(registro.jogo);
-            dados.datasets[1].data.push(registro.Votos);
+            dados.datasets[1].data.push(registro.votos);
         }
 
         console.log(JSON.stringify(dados));
@@ -177,6 +177,8 @@
                 }
             }
         });
+
+        setTimeout(() => atualizarGrafico(votos, dados), 2000);
     }
 
 </script>

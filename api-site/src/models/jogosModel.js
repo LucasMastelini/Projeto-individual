@@ -9,7 +9,7 @@ function votarjogo(idjogo, idusuario ) {
     contador++;
 
     var instrucao = `
-    update usuario set fkjogos = ${idjogo}, voto = ${1} where idlog = 2;
+    update usuario set fkjogos = ${idjogo}, voto = ${1} where idusuario = 1;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);

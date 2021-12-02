@@ -19,7 +19,7 @@
 
 
 
-<body onload="validarSessao()">
+<body >
 
     <div class="sidebar">
         <div class="logo_content">
@@ -417,6 +417,7 @@ var idusuario = sessionStorage.ID_USUARIO;
 let proximaAtualizacao;
 
 window.onload = obterDadosGrafico();
+window.onload = validarSessao();
 
 // b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
@@ -448,7 +449,7 @@ function obterDadosGrafico(votos) {
 }
 
 // só altere aqui se souber o que está fazendo!
-function plotarGrafico(resposta) {
+function plotarGrafico( resposta) {
     console.log('iniciando plotagem do gráfico...');
 
     var dados = {
@@ -510,6 +511,7 @@ function plotarGrafico(resposta) {
     });
 
     //Atualiza os dados de 2 em 2 segundos
+    // setTimeout(() => atualizarGrafico(votos, dados), 2000);
 
 }
 </script>
