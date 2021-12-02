@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OnlyFPS | Home</title>
     <link rel="icon" href="./assets/img/alvo.png">
-    <link rel="stylesheet" href="./css/style2.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/sidebar.css">
     <link rel="import" href="./js/funcoes.js">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
 </head>
 
 
@@ -241,59 +242,59 @@
 
                 <section class="card" id='R6'>
                     <h3>RainbowSix</h3>
-                   <button>Like</button>
-                    <button>Saiba Mais</button>
+                   <button onclick="votar(1)">LIKE</button>
+                    <button>SAIBA MAIS</button>
                 </section>
                 <section class="card" id='CS'>
                     <h3>CS:GO</h3>
-                   <button>Like</button>
-                    <button>Saiba Mais</button>
+                   <button onclick="votar(2)">LIKE</button>
+                    <button>SAIBA MAIS</button>
                 </section>
                 <section class="card" id='vava'>
                     <h3>Valorant</h3>
-                   <button>Like</button>
-                    <button>Saiba Mais</button>
+                   <button onclick="votar(3)">LIKE</button>
+                    <button>SAIBA MAIS</button>
                 </section>
                 <section class="card" id='over'>
                     <h3>OverWatch</h3>
-                   <button>Like</button>
-                    <button>Saiba Mais</button>
+                   <button onclick="votar(4)">LIKE</button>
+                    <button>SAIBA MAIS</button>
                 </section>
                 <section class="card" id='cod'>
                     <h3>Warzone</h3>
-                   <button>Like</button>
-                    <button>Saiba Mais</button>
+                   <button onclick="votar(5)">LIKE</button>
+                    <button>SAIBA MAIS</button>
                 </section>
                 <section class="card" id='fort'>
                     <h3>Fortnite</h3>
-                   <button>Like</button>
-                    <button>Saiba Mais</button>
+                   <button onclick="votar(6)">LIKE</button>
+                    <button>SAIBA MAIS</button>
+                </section>
+                <section class="card" id='War'>
+                    <h3>Fortnite</h3>
+                   <button onclick="votar(7)">LIKE</button>
+                    <button>SAIBA MAIS</button>
+                </section>
+                <section class="card" id='BF'>
+                    <h3>Fortnite</h3>
+                   <button onclick="votar(8)">LIKE</button>
+                    <button>SAIBA MAIS</button>
                 </section>
         </div>
 
         </main>
 
-
-
-
-
-
-
-
         <div class="dashboard">
             <div class='container'>
                 <div class='boxes' id="graph">
                     <h1>Ranqueamento de Jogos</h1>
-
-
-
                     <div>
                         <section>
                             <h1>Ranking</h1>
                             <h2>Votos: </h2>
                         </section>
                         <section style="width:100%">
-                            <canvas id="myChart" style="width: 100%; height: 100%"></canvas>
+                            <canvas id="canvas_grafico"></canvas>
                             <section>
                     </div>
 
@@ -301,12 +302,7 @@
                 </div>
             </div>
         </div>
-
-
-
-
     </section>
-
 </body>
 
 
@@ -354,64 +350,166 @@
         window.location = "../login.html";
     }
 
+//     carrega();
+
+//   function carrega() {
+//     fetch("/jogos/listar", {
+//       method: "GET",
+//     })
+//       .then(function (resposta) {
+//         console.log("resposta: ", resposta);
+
+//         resposta
+//           .json()
+//           .then(function (json) {
+//             for (var i = 0; i < json.length; i++) {
+//               div_imagens.innerHTML += `    <img
+//                 onclick="votar(${json[i].id})"
+//                 height="150"
+//                 src="https://cdn.motor1.com/images/mgl/ZJNzA/s1/chevrolet-tracker-2020.jpg"
+//                 alt=""
+//                 />
+                
+//                 <b>${json[i].curtida}</b>
+//                 `;
+//             }
+
+//           })
+//           .catch(function (erro) {
+//             console.log(erro);
+//           });
+//       })
+//       .catch(function (resposta) {});
+//   }
+var idusuario = sessionStorage.ID_USUARIO;
+  function votar(idjogo,idusuario) {
+    console.log(idjogo);
+
+    fetch(`/jogos/votar/${idusuario}/${idjogo}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        idjogo: idjogo,
+        idusuario: idusuario,
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+        div_imagens.innerHTML = "";
+        carrega()
+      })
+      .catch(function (resposta) {});
+  }
+
 
 </script>
 <script>
 
-    const config = {
-        type: "bar",
-        data: {
-            labels: ['RainbowSix', 'CS:GO', 'Valorant', 'OverWatch', 'Warzone', 'Fortnite'],
-            datasets: [
-                {
-                    label: "Qantidade de votos",
-                    data: [11, 10.6, 13.6, 11.4, 6.8, 9.3],
-                    backgroundColor: "#8b008b",
-                    borderColor: "#3F51B5",
-                }
-            ]
-        },
-        options: {
-            maintainAspectRatio: false
 
-        }
+// b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+// verificar_autenticacao();
+
+// altere aqui como os dados serão exibidos
+// e como são recuperados do BackEnd
+let proximaAtualizacao;
+
+window.onload = obterDadosGrafico();
+
+// b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+//verificar_autenticacao();
+
+// altere aqui como os dados serão exibidos
+// e como são recuperados do BackEnd
+function obterDadosGrafico(votos) {
+    if (proximaAtualizacao != undefined) {
+        clearTimeout(proximaAtualizacao);
     }
 
-    var myChartLine = new Chart(document.getElementById("myChart"), config);
+    fetch(`/medidas/ultimas/votos`, { cache: 'no-store' }).then(function (response) {
+        if (response.ok) {
+            response.json().then(function (resposta) {
+                console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                resposta.reverse();
 
-        //Função para obter os dados de temperatura do server
+                plotarGrafico(resposta);
+            });
+        } else {
+            console.error('Nenhum dado encontrado ou erro na API');
+        }
+    })
+        .catch(function (error) {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        });
 
-        //Esse atributo dentro do contexto serve para saber qual foi o último índice processado, assim eliminado os outros elementos na
-        //hora de montar/atualizar o gráfico
-        // this.lastIndexTemp = 0;
-        // this.time = 0;
+}
 
-        // function get_data(){
+// só altere aqui se souber o que está fazendo!
+function plotarGrafico(resposta) {
+    console.log('iniciando plotagem do gráfico...');
 
-        //     var http = new XMLHttpRequest();
-        //     http.open('GET', 'http://localhost:3000/api/temperature', false);
-        //     http.send(null);        
+    var dados = {
+        labels: [],
+        datasets: [
+            {
+                yAxisID: '',
+                label: 'Votos',
+                borderColor: '#32B9CD',
+                backgroundColor: '#ff7200',
+                fill: true,
+                data: []
+            },
+            
+        ]
+    };
 
-        //     var obj = JSON.parse(http.responseText);
-        //     if (obj.data.length == 0){
-        //         return;
-        //     }
+    for (i = 0; i < resposta.length; i++) {
+        var registro = resposta[i];
+        dados.labels.push(registro.nome);
+        dados.datasets[0].data.push(registro.Votos);
+    
+    }
 
-        //     var _lastIndexTemp = this.lastIndexTemp;
-        //     this.lastIndexTemp = obj.data.length;
-        //     listTemp = obj.data.slice(_lastIndexTemp);
+    console.log(JSON.stringify(dados));
+    
+    var ctx = document.getElementById("canvas_grafico");
 
-        //     listTemp.forEach(data => {
-        //         //Máximo de 60 itens exibidos no gráfico
-        //         if (chart.data.labels.length == 10 && chart.data.datasets[0].data.length == 10){
-        //             chart.data.labels.shift();
-        //             chart.data.datasets[0].data.shift();
-        //         }
-        //         chart.data.labels.push(this.time++);
-        //         chart.data.datasets[0].data.push(parseFloat(data));
-        //         chart.update();
-		// 	});
+    const grafico_barra = new Chart(ctx, {
+     type: 'bar',
+      data: dados,
 
-		// 	document.getElementById('average').textContent = obj.average;
-		// } 
+    // var ctx = canvas_grafico.getContext('2d');
+    // window.grafico_linha = Chart.Bar(ctx, {
+    //     data: dados,
+        //Configurações do gráfico
+        options: {
+    
+            stacked: false,
+            title: {
+                display: true,
+               
+            },
+            scales: {
+                yAxes: [ {
+                    type: 'linear',
+                    display: false,
+                    position: 'right',
+                    id: 'personagem', 
+                    ticks: {
+                        beginAtZero: true,
+                      
+                    },
+
+                  
+                }],
+            }
+        }
+    });
+
+    //Atualiza os dados de 2 em 2 segundos
+
+}
 </script>

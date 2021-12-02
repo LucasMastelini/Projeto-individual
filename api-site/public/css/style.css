@@ -323,11 +323,11 @@ body {
   background-image: url('../assets/img/fundo_cards.jpg');
   background-size: cover;
   width: 100vw;
-  height: 226vh;
+  height: 600vh;
   margin-left: 0%;
   background-repeat: no-repeat;
   background-position: center;
-  display: flex;
+  
 }
 
 .dashboard{
@@ -356,10 +356,12 @@ body {
 }
 
 #conteudo_log {
-  display: none;
+  
+  display: block;
 }
 
 .show .container{
+  
   padding: 5%;
   padding-left: 0px;
   margin-left: 18%;
@@ -368,16 +370,17 @@ body {
 .show  .container .cards .card{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  align-content: flex-start;
-  flex-wrap: nowrap;
+  align-items: flex-start;
   padding: 5%;
+  flex-wrap: nowrap;
+ 
 }
 
 .show .cards .card {
-  margin: 1%;
+  margin: 7%;
   margin-right: 2px;
-  
+  display: flex;
+ 
   
 }
 
@@ -388,16 +391,28 @@ main h3{
 main.cards{
   display: flex;
   color: #fa6900;
-  justify-content: space-around;
-  align-items: stretch;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+    flex-wrap: nowrap;
+  
 }
 
 main button{
   cursor: pointer;
-  margin-top: 30%;
-  max-width: 60px;
+  margin-top: 10%;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  height: 35px;
+  background-color: #69d2e7c1;
+  font-size: 13px;
+  font-weight: 700;
+  color: #000000;
+}
+
+
+main button:hover{
+  cursor: pointer;
+  background-color: #a7dbd8cb;
 }
 
 main span{
@@ -411,6 +426,8 @@ main span{
   background-repeat: no-repeat;
   border-radius: 10px;
   transition: all 1.5s ease;
+  height: 10vh;
+  overflow: hidden;
 }
  
 #R6:hover{
@@ -419,8 +436,10 @@ main span{
   background-position-x: 100%;
   background-repeat: no-repeat;
   border-radius: 10px;
-  /* transform: translateX(10px) scale(1.2); */
-  transition: all 1s ease;
+  transform: translateX(10px) scale(1.4);
+  transition: all 1.5s ease;
+  height: 45vh;
+  overflow: hidden;
 }
 
 
@@ -428,9 +447,12 @@ main span{
   background-image: url('../assets/img/csgo3.jpg');
   background-size: cover ;
   background-position-x: 20%;
+  background-position-y: 25%;
   background-repeat: no-repeat;
   border-radius: 10px;
   transition: all 1.5s ease;
+  height: 10vh;
+  overflow: hidden;
 }
 
 #CS:hover{
@@ -439,8 +461,10 @@ main span{
   background-position-x: 80%;
   background-repeat: no-repeat;
   border-radius: 10px;
-  /* transform: translateX(10px) scale(1.2); */
-  transition: all 1s ease;
+  transform: translateX(10px) scale(1.4);
+  transition: all 1.5s ease;
+  height: 45vh;
+  overflow: hidden;
 }
 
 #vava{
@@ -451,6 +475,8 @@ main span{
  color: #fff;
  border-radius: 10px;
  transition: all 1.5s ease;
+ height: 10vh;
+ overflow: hidden;
 }
 
 #vava:hover{
@@ -460,8 +486,10 @@ main span{
  background-repeat: no-repeat;
  color: #fa6900;
  border-radius: 10px;
- /* transform: translateX(10px) scale(1.2); */
-  transition: all 1s ease;
+ transform: translateX(10px) scale(1.2);
+  transition: all 1.5s ease;
+  height: 45vh;
+  overflow: hidden;
 }
 
 #over{
@@ -472,6 +500,8 @@ main span{
   color: #000000;
   border-radius: 10px;
   transition: all 1.5s ease;
+  height: 10vh;
+  overflow: hidden;
 }
 
 #over:hover{
@@ -481,29 +511,35 @@ main span{
   background-repeat: no-repeat;
   color: #000000;
   border-radius: 10px;
-  /* transform: translateX(10px) scale(1.2); */
-  transition: all 1s ease;
+  transform: translateX(10px) scale(1.4);
+  transition: all 1.5s ease;
+  height: 45vh;
+  overflow: hidden;
 }
 
  #cod{
   background-image: url('../assets/img/Capa-cod-warzone.jpg');
   background-size: cover;
-  background-position-x: 80%;
+  background-position-x: 81%;
   background-repeat: no-repeat;
   color: #fa6900;
   border-radius: 10px;
   transition: all 1.5s ease;
+  height: 10vh;
+  overflow: hidden;
  }
   
  #cod:hover{
   background-image: url('../assets/img/Capa-cod-warzone.jpg');
   background-size: cover;
-  background-position-x: 10%;
+  background-position-x: 12%;
   background-repeat: no-repeat;
   color: #fa6900;
   border-radius: 10px;
-  /* transform: translateX(10px) scale(1.2); */
-  transition: all 1s ease;
+  transform: translateX(10px) scale(1.4);
+  transition: all 1.5s ease;
+  height: 45vh;
+  overflow: hidden;
 }
 
 
@@ -515,6 +551,8 @@ main span{
  color: #000000;
  border-radius: 10px;
  transition: all 1.5s ease;
+ height: 10vh;
+ overflow: hidden;
 }
 
 #fort:hover{
@@ -524,8 +562,60 @@ main span{
  background-repeat: no-repeat;
  color: #fa6900;
  border-radius: 10px;
- /* transform: translateX(10px) scale(1.2); */
-  transition: all 1s ease;
+ transform: translateX(10px) scale(1.4);
+  transition: all 1.5s ease;
+  height: 45vh;
+  overflow: hidden;
+}
+
+#War{
+ background-image: url('../assets/img/fundo_warface.jpg');
+ background-size: cover;
+ background-position-x: 20%;
+ background-repeat: no-repeat;
+ color: #000000;
+ border-radius: 10px;
+ transition: all 1.3s ease;
+ height: 10vh;
+ overflow: hidden;
+}
+
+#War:hover{
+ background-image: url('../assets/img/fundo_warface.jpg');
+ background-size: cover;
+ background-position-x: 80%;
+ background-repeat: no-repeat;
+ color: #fa6900;
+ border-radius: 10px;
+ transform: translateX(10px) scale(1.4);
+  transition: all 1.3s ease;
+  height: 45vh;
+  overflow: hidden;
+}
+
+#BF{
+ background-image: url('../assets/img/Battlefield_4_capa.jpg');
+ background-size: cover;
+ background-position-x: 25%;
+ background-repeat: no-repeat;
+ color: #000000;
+ border-radius: 10px;
+ transition: all 1.3s ease;
+ height: 10vh;
+ overflow: hidden;
+}
+
+#BF:hover{
+ background-image: url('../assets/img/Battlefield_4_capa.jpg');
+ background-size: cover;
+ background-position-x: 60%;
+ background-repeat: no-repeat;
+ color: #fa6900;
+ border-radius: 10px;
+ transform: translateX(10px) scale(1.4);
+  transition: all 1.3s ease;
+  height: 45vh;
+  overflow: hidden;
 }
 
 /* cores para o site
