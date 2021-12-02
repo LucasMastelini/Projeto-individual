@@ -29,6 +29,6 @@ function cadastrar(nome, Nickname, email,  senha) {
 
 module.exports = {
     entrar,
-    cadastrar,
-    listar,
-};
+        cadastrar,
+        listar,
+    };

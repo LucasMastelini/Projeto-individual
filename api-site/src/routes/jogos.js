@@ -3,7 +3,7 @@ var router = express.Router();
 
 var jogosController = require("../controllers/jogosController")
 
-router.post("/votar/:idusuario/:idjogos", function (req, res) {
+router.post("/votar/:idusuario/", function (req, res) {
     jogosController.votar(req, res)
 });
 

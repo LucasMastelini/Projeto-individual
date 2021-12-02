@@ -64,7 +64,7 @@
                 <div class="formulario">
                     <div class="div_form">
                         Nome:
-                        <input id="nome_input" type="text" placeholder="Ada Lovelace">
+                        <input id="nome_input" type="text" placeholder="Nome">
                         <br>
                         NickName:
                         <input id="nickname_input" type="text" placeholder="NickName">
@@ -100,7 +100,7 @@
         var NicknameVar = nickname_input.value;
         var senhaVar = senha_input.value;
 
-        // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
+        
         if (nomeVar == "" || emailVar == "" || NicknameVar == "" || senhaVar == "" ) {
 
             window.alert("Preencha todos os campos para prosseguir!");
@@ -145,7 +145,7 @@
 
             if (resposta.ok) {
                 window.alert("Cadastro realizado com sucesso!");
-                // window.location = "./login.html";
+                 window.location = "./login.html";
                 limparFormulario();
                     
             } else {

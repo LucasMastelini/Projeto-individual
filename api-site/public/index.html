@@ -359,57 +359,31 @@
         window.location = "../login.html";
     }
 
-//     carrega();
 
-//   function carrega() {
-//     fetch("/jogos/listar", {
-//       method: "GET",
-//     })
-//       .then(function (resposta) {
-//         console.log("resposta: ", resposta);
-
-//         resposta
-//           .json()
-//           .then(function (json) {
-//             for (var i = 0; i < json.length; i++) {
-//               div_imagens.innerHTML += `    <img
-//                 onclick="votar(${json[i].id})"
-//                 height="150"
-//                 src="https://cdn.motor1.com/images/mgl/ZJNzA/s1/chevrolet-tracker-2020.jpg"
-//                 alt=""
-//                 />
-                
-//                 <b>${json[i].curtida}</b>
-//                 `;
-//             }
-
-//           })
-//           .catch(function (erro) {
-//             console.log(erro);
-//           });
-//       })
-//       .catch(function (resposta) {});
-//   }
 var idusuario = sessionStorage.ID_USUARIO;
-  function votar(idjogo,idusuario) {
-    console.log(idjogo);
 
-    fetch(`/jogos/votar/${idusuario}/${idjogo}`, {
+
+  function votar(idjogo) {
+    console.log("idjogo");
+    console.log(idusuario)
+    fetch(`/jogos/votar/${idusuario}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
         idjogo: idjogo,
-        idusuario: idusuario,
       }),
     })
       .then(function (resposta) {
         console.log("resposta: ", resposta);
-        div_imagens.innerHTML = "";
+        window.location = "/index.html";
         carrega()
+        
       })
       .catch(function (resposta) {});
+
+      
   }
 
 
@@ -417,23 +391,12 @@ var idusuario = sessionStorage.ID_USUARIO;
 <script>
 
 
-// b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-
-// verificar_autenticacao();
-
-// altere aqui como os dados serão exibidos
-// e como são recuperados do BackEnd
 let proximaAtualizacao;
 
 window.onload = obterDadosGrafico();
 window.onload = validarSessao();
 
-// b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
-//verificar_autenticacao();
-
-// altere aqui como os dados serão exibidos
-// e como são recuperados do BackEnd
 function obterDadosGrafico(votos) {
     if (proximaAtualizacao != undefined) {
         clearTimeout(proximaAtualizacao);
@@ -457,7 +420,7 @@ function obterDadosGrafico(votos) {
 
 }
 
-// só altere aqui se souber o que está fazendo!
+
 function plotarGrafico( resposta) {
     console.log('iniciando plotagem do gráfico...');
 
@@ -465,7 +428,7 @@ function plotarGrafico( resposta) {
         labels: [],
         datasets: [
             {
-                yAxisID: '',
+
                 label: 'Votos',
                 borderColor: '#32B9CD',
                 backgroundColor: '#ff7200',
@@ -490,31 +453,26 @@ function plotarGrafico( resposta) {
     const grafico_barra = new Chart(ctx, {
      type: 'bar',
       data: dados,
-
-    // var ctx = canvas_grafico.getContext('2d');
-    // window.grafico_linha = Chart.Bar(ctx, {
-    //     data: dados,
-        //Configurações do gráfico
         options: {
-    
-            stacked: false,
-            title: {
-                display: true,
-               
-            },
             scales: {
-                yAxes: [ {
+                yAxes: [{
                     type: 'linear',
                     display: false,
-                    position: 'right',
-                    id: 'personagem', 
                     ticks: {
-                        beginAtZero: true,
-                      
+                        beginAtZero: true,    
                     },
-
-                  
                 }],
+                xAxes: [{
+                    display: true,
+                    ticks: {
+                        fontColor: "black",
+                        fontSize: 15    
+                    },
+                }]
+            },
+            legend:{
+                fontColor: "black",
+
             }
         }
     });

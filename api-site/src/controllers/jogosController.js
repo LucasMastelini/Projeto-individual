@@ -4,14 +4,15 @@ var jogosModel = require("../models/jogosModel");
 
 function votar(req, res) {
     var idjogo = req.body.idjogo;
-    var idusuario = req.body.idusuario;
+    var idusuario = req.params.idusuario;
+    console.log(idjogo, idusuario)
 
     if (idjogo == undefined) {
         res.status(400).send('cago tudo');
     }
     
 
-    jogosModel.votarjogo(idjogo,idusuario).then(function (res){
+    jogosModel.votarjogo(idjogo, idusuario).then(function (res){
         res.status(200).send('foi');
     }).catch(function(erro) {
         console.log(erro);
