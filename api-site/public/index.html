@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyFPS | Home</title>
+    <link rel="icon" href="./assets/img/alvo.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/sidebar.css">
+    <link rel="import" href="./js/funcoes.js">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+</head>
+
+
+
+<body >
+
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <img src="./assets/img/alvo.png" alt="">
+                <div class="logo_name">OnlyFPS</div>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav_list">
+            <li>
+                <a href="index.html#banner">
+                    <i class='bx bx-user'></i>
+                    <span class="links_name">Home</span>
+                </a>
+                <span class="tooltip">Home</span>
+            </li>
+
+            <li>
+                <a href="index.html#primeira">
+                    <i class='bx bx-question-mark'></i>
+                    <span class="links_name">FPS</span>
+                </a>
+                <span class="tooltip">FPS</span>
+            </li>
+            <li>
+                <a href="index.html#segunda">
+                    <i class='bx bx-book-content'></i>
+                    <span class="links_name">Genero</span>
+                </a>
+                <span class="tooltip">Genero</span>
+            </li>
+            <li>
+                <a href="index.html#conteudo_log">
+                    <i class='bx bx-joystick'></i>
+                    <span class="links_name">Jogos</span>
+                </a>
+                <span class="tooltip">Jogos</span>
+            </li>
+            <li>
+                <a href="index.html#graph">
+                    <i class='bx bx-line-chart'></i>
+                    <span class="links_name">Ranking</span>
+                </a>
+                <span class="tooltip">Ranking</span>
+            </li>
+            <li id="fechar_vazio">
+            </li>
+            <li id="fechar_cadastro">
+                <a href="cadastro.html">
+                    <i class='bx bx-user-plus'></i>
+                    <span class="links_name">Cadastro</span>
+                </a>
+                <span class="tooltip">Cadastro</span>
+            </li>
+            <li id="fechar_login">
+                <a href="./login.html">
+                    <i class='bx bx-log-in'></i>
+                    <span class="links_name">Login</span>
+                </a>
+                <span class="tooltip">Login</span>
+            </li>
+            <!-- <li>
+                <a href="">
+                    <i class='bx bx-cog'></i>
+                    <span class="links_name">Configurações</span>
+                </a>
+                <span class="tooltip">Configurações</span>
+            </li> -->
+            <li id="sair">
+                <a href="" onclick="limparSessao()">
+                    <i class='bx bx-log-out-circle'></i>
+                    <span onclick="limparSessao" class="links_name">Log-out</span>
+                </a>
+                <span class="tooltip">Log-out</span>
+            </li>
+        </ul>
+        <div class="profile_content">
+            <div class="profile" id="profile">
+                <div class="profile_details">
+                    <img src="./assets/imgs/pessoa3.png" alt="">
+                    <div class="name_job">
+                        <div class="job">Bem-vindo</div>
+                        <div class="name" id="nick"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div>
+        <div class="banner" id='banner'>
+            <div class="container">
+                <p>
+                    A entrada de um <span>Novo Universo Empolgante</span>.
+                    A onde o seu Guia é o Seu <span>instinto</span>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="social">
+        <div class="container">
+            <div class="titulo" id='primeira'>
+                <h2>O'que é FPS</h2>
+            </div>
+            <div class="box">
+                <div class="filho">
+                    <h4>FPS significa Frames Per Second ou, em português, Quadros por Segundo.
+                        Qualquer ação que visualizamos em filmes,
+                        vídeos ou jogos é composta por frames. São nada mais do que fotos sequenciais que,
+                        ao serem reproduzidas em velocidade, viram animações.</h4>
+
+
+                    <p> Muitos se preocupam se a imagem de um
+                        filme ou vídeo é em HD ou Full HD,
+                        porém não é só isso que determina a qualidade de cena. Existe um outro fator, muito
+                        conhecido
+                        por estudantes de cinema,
+                        comunicação e gamers, que se chama FPS (Frames Per Second ou Quadros por Segundo). Qualquer
+                        ação
+                        que visualizamos em filmes,
+                        vídeos ou jogos é composta por frames.
+                        Eles são nada mais do que imagens sequenciais que, ao serem reproduzidas em velocidade, dão
+                        a
+                        sensação de movimento.
+                    </p>
+                    <p>
+                        Vídeos com o FPS baixo passam a impressão de que a sequência sofre inúmeras quebras na
+                        evolução,
+                        e
+                        às vezes deixam a sensação de que foram deixados "rastros". Já em filmes com um número maior
+                        de
+                        quatros por segundo (acima de 60), isso dá lugar a um plano limpo.
+
+                        No caso dos jogos não é diferente e, para aqueles que desejam comandos em tempo real, uma
+                        alta
+                        taxa
+                        de FPS é indispensável. O mais comum usado hoje são 30 quadros por segundo, mas o ideal
+                        seriam
+                        60.
+                        Em games pesados, você precisa ter um hardware extremamente potente para aguentar um número
+                        de
+                        FPS
+                        alto sem abrir mão de bons gráficos.
+                    </p>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="Genero">
+        <div class="container">
+            <div class="titulo" id="segunda">
+                <h2>Genero</h2>
+            </div>
+            <div class="box">
+                <div class="wall">
+                    <!-- <div class="subtititulo"> -->
+                    <span>
+                        Os jogos FPS fazem parte de um dos gêneros mais populares da indústria dos games,
+                        movimentando
+                        milhões de dólares todos os anos. A origem do gênero vem dos primeiros jogos em primeira
+                        pessoa
+                        ainda nos anos 1980, mas foram os títulos lançados na década seguinte que definiram suas
+                        convenções,
+                        seguidas até hoje.
+
+                    </span>
+                    <!-- </div> -->
+
+                    <div class="box">
+                        <p>Os jogos FPS (ou First-Person Shooters, em inglês) são exatamente o que o nome descreve:
+                            jogos em que a visão do personagem é em primeira pessoa e a mesma do jogador, para maior
+                            imersão.
+                            Títulos do gênero são geralmente focados em tiro,
+                            ação com armas de fogo ou brancas para combate corpo a corpo, com algumas variações.</p>
+                    </div>
+
+                    <div class="box">
+                        <p>As principais características de um jogo FPS são a visão ampla do personagem,
+                            colocando o jogador em sua posição no mapa e permitindo a visualização de todo o ambiente à
+                            sua
+                            volta,
+                            o foco no combate, preferencialmente com armas de fogo mas também pode incluir armas de
+                            combate
+                            corpo a corpo,
+                            e grande quantidade de inimigos a serem combatidos. Caso o jogo seja um multiplayer,
+                            os jogadores se organizam em times que se enfrentam, até que um lado saia como vencedor.</p>
+                    </div>
+                    <div class="box">
+                        <p>Por via de regra, o jogador não é capaz de ver o personagem que controla por completo,
+                            exceto em momentos-chave como cutscenes,
+                            ou usando elementos de cenário que sirvam como espelhos.
+                            As únicas partes visíveis são as mãos em geral, portando as armas e/ou equipamentos que você
+                            tem
+                            à disposição.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <section class="show" id="conteudo_log">
+        <div class="container">
+
+            <main class="cards">
+
+                <section class="card" id='R6'>
+                    <h3>RainbowSix</h3>
+                   <button onclick="votar(1)">LIKE</button>
+                    
+                   <a href="https://www.ubisoft.com/pt-br/game/rainbow-six/siege/game-info">
+                       <button>SAIBA MAIS</button></a>
+                </section>
+                <section class="card" id='CS'>
+                    <h3>CS:GO</h3>
+                   <button onclick="votar(2)">LIKE</button>
+                   <a href="https://blog.counter-strike.net/pt-pt/index.php/informacoes-sobre-o-csgo/">
+                    <button>SAIBA MAIS</button></a>
+                </section>
+                <section class="card" id='vava'>
+                    <h3>Valorant</h3>
+                   <button onclick="votar(3)">LIKE</button>
+                   <a href="https://playvalorant.com/pt-br/">
+                    <button>SAIBA MAIS</button></a>
+                </section>
+                <section class="card" id='over'>
+                    <h3>OverWatch</h3>
+                   <button onclick="votar(4)">LIKE</button>
+                   <a href="https://playoverwatch.com/pt-br/about/">
+                    <button>SAIBA MAIS</button></a>
+                </section>
+                <section class="card" id='cod'>
+                    <h3>Warzone</h3>
+                   <button onclick="votar(5)">LIKE</button>
+                   <a href="https://www.callofduty.com/content/atvi/callofduty/warzone/web/pt_br/home.html#">
+                    <button>SAIBA MAIS</button></a>
+                </section>
+                <section class="card" id='fort'>
+                    <h3>Fortnite</h3>
+                   <button onclick="votar(6)">LIKE</button>
+                   <a href="https://www.epicgames.com/fortnite/pt-BR/home">
+                    <button>SAIBA MAIS</button></a>
+                </section>
+                <section class="card" id='War'>
+                    <h3>Fortnite</h3>
+                   <button onclick="votar(7)">LIKE</button>
+                   <a href="https://warface.com/en/">
+                    <button>SAIBA MAIS</button></a>
+                </section>
+                <section class="card" id='BF'>
+                    <h3>Fortnite</h3>
+                   <button onclick="votar(8)">LIKE</button>
+                   <a href="https://www.ea.com/pt-br/games/battlefield/battlefield-5/about">
+                    <button>SAIBA MAIS</button></a>
+                </section>
+        </div>
+
+        </main>
+
+        <div class="dashboard">
+            <div class='container'>
+                <div class='boxes' id="graph">
+                    <h1>Ranqueamento de Jogos</h1>
+                    <div>
+                        <section>
+                            <h1>Ranking</h1>
+                            <h2>Votos: </h2>
+                        </section>
+                        <section style="width:100%">
+                            <canvas id="canvas_grafico"></canvas>
+                            <section>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+
+</html>
+<script>
+    var btn = document.querySelector('#btn');
+    var sidebar = document.querySelector('.sidebar');
+
+    btn.onclick = function () {
+        sidebar.classList.toggle('active');
+    }
+</script>
+<script>
+
+    function validarSessao() {
+
+
+        var email = sessionStorage.EMAIL_USUARIO;
+        var nome = sessionStorage.NOME_USUARIO;
+        var nickName = sessionStorage.nickName_USUARIO;
+
+        var h1LoginUsuario = document.getElementById("h1_login_usuario");
+
+
+        if (email != null && nome != null) {
+            window.alert(`Seja bem-vindo, ${nickName}!`);
+            profile.style.visibility = "visible";
+            fechar_cadastro.style.display = "none";
+            fechar_login.style.display = "none";
+            fechar_vazio.style.display = "none";
+            sair.style.display = "block";
+            conteudo_log.style.display = "block";
+
+
+            nick.innerHTML = `${nickName}`;
+            if (h1LoginUsuario != undefined) {
+                h1LoginUsuario.innerHTML = email;
+
+            }
+        }
+    }
+    function limparSessao() {
+
+        sessionStorage.clear();
+        window.location = "../login.html";
+    }
+
+
+var idusuario = sessionStorage.ID_USUARIO;
+
+
+  function votar(idjogo) {
+    console.log("idjogo");
+    console.log(idusuario)
+    fetch(`/jogos/votar/${idusuario}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        idjogo: idjogo,
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+        window.location = "/index.html";
+        carrega()
+        
+      })
+      .catch(function (resposta) {});
+
+      
+  }
+
+
+</script>
+<script>
+
+
+let proximaAtualizacao;
+
+window.onload = obterDadosGrafico();
+window.onload = validarSessao();
+
+
+function obterDadosGrafico(votos) {
+    if (proximaAtualizacao != undefined) {
+        clearTimeout(proximaAtualizacao);
+    }
+
+    fetch(`/medidas/ultimas/votos`, { cache: 'no-store' }).then(function (response) {
+        if (response.ok) {
+            response.json().then(function (resposta) {
+                console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                resposta.reverse();
+
+                plotarGrafico(resposta);
+            });
+        } else {
+            console.error('Nenhum dado encontrado ou erro na API');
+        }
+    })
+        .catch(function (error) {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        });
+
+}
+
+
+function plotarGrafico( resposta) {
+    console.log('iniciando plotagem do gráfico...');
+
+    var dados = {
+        labels: [],
+        datasets: [
+            {
+
+                label: 'Votos',
+                borderColor: '#32B9CD',
+                backgroundColor: '#ff7200',
+                fill: true,
+                data: []
+            },
+            
+        ]
+    };
+
+    for (i = 0; i < resposta.length; i++) {
+        var registro = resposta[i];
+        dados.labels.push(registro.nome);
+        dados.datasets[0].data.push(registro.Votos);
+    
+    }
+
+    console.log(JSON.stringify(dados));
+    
+    var ctx = document.getElementById("canvas_grafico");
+
+    const grafico_barra = new Chart(ctx, {
+     type: 'bar',
+      data: dados,
+        options: {
+            scales: {
+                yAxes: [{
+                    type: 'linear',
+                    display: false,
+                    ticks: {
+                        beginAtZero: true,    
+                    },
+                }],
+                xAxes: [{
+                    display: true,
+                    ticks: {
+                        fontColor: "black",
+                        fontSize: 15    
+                    },
+                }]
+            },
+            legend:{
+                fontColor: "black",
+
+            }
+        }
+    });
+
+    //Atualiza os dados de 2 em 2 segundos
+    // setTimeout(() => atualizarGrafico(votos, dados), 2000);
+
+}
+</script>

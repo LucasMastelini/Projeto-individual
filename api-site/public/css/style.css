@@ -1,0 +1,630 @@
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cinzel Decorative', cursive;
+  box-sizing: border-box;
+  /* display: flex; */
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    border-radius: 100px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background-color: #f98e37;
+    border-radius: 100px;
+}
+
+
+
+
+.banner {
+  height: 110vh;
+  color: white;
+  background-image: url('../assets/img/roman-chacornac-heart-of-planet-4.jpg');
+  background-size: cover;
+  width: 100%;
+  margin-left: 0%;
+  background-repeat: no-repeat;
+  background-position: center;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 65%;
+  margin: auto;
+}
+
+.banner .container {
+  height: 500px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+
+
+
+.banner p {
+  color: #fa6900;
+  width: 23%;
+  margin: 0;
+  padding: 0;
+  /* font-weight: 500; */
+  font-size: 36px;
+  border-radius: 12px;
+}
+
+.banner span {
+  font-weight: 900;
+}
+
+.social {
+  display: flex;
+  background-color: #e6ddddcc;
+  padding: -50px 0;
+  width: 100%;
+  margin-left: 0%;
+  height: 160vh;
+  background-color: black;
+  background-image: url('../assets/img/fundo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 1s ease;
+  scroll-behavior: smooth;
+}
+
+.social .container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+
+
+.social .container .box {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease; 
+  
+}
+.social .container .box:hover {
+  
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+.filho {
+  padding: 2%;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  left: -100%;
+  transform-origin: left;
+  transition: left 1000ms;
+  background: rgb(6,2,79);
+  background: linear-gradient(90deg, rgba(6,2,79,0.7580429248595506) 0%, rgba(34,31,124,0.8563575316011236) 50%, rgba(6,2,79,0.7608519136235955) 84%);
+  border-radius: 20px;  
+}
+
+.box:hover .filho {
+  background: rgb(6,2,79);
+  background: linear-gradient(90deg, rgba(6,2,79,0.7580429248595506) 0%, rgba(34,31,124,0.8563575316011236) 50%, rgba(6,2,79,0.7608519136235955) 84%);
+  color: #ffffff;
+  left: 0%;
+  border-radius: 20px;  
+}
+
+.social .titulo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.social h2 {
+  display: flex;
+  padding: 20px;
+  background-color: #3d8b9b;
+  border-radius: 20px;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  transition: transform 1s;
+  transform: translateX(0) scale(0.5);
+  transition: all 1499ms ease;
+  cursor: pointer;
+}
+
+.social h2:hover {
+  display: flex;
+  padding: 20px;
+  background-color: #040257;
+  border-radius: 20px;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  transform: translateX(10px) scale(1.2);
+  transition: all 1500ms ease;
+  cursor: pointer;
+}
+
+.social .boxes {
+  display: flex;
+}
+
+
+.social h4 {
+  color: #fa6900;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+.social p {
+  width: 100%;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.Genero {
+  display: flex;
+  padding: 50px 0;
+  width: 100%;
+  height: 145vh;
+  background-image: url('../assets/img/ed-laag-volcaniccatwalk-cropped-v004.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.Genero .container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.Genero .container .wall {
+  padding: 2%;
+  font-size: 0px;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  right: -100%;
+  transform-origin: right;
+  transition: right 1000ms;
+  background: rgb(6,2,79);
+  background: linear-gradient(90deg, rgba(6,2,79,0.7580429248595506) 0%, rgba(34,31,124,0.8563575316011236) 50%, rgba(6,2,79,0.7608519136235955) 84%);
+  border-radius: 20px;  
+}
+
+.box:hover .wall{
+  background: rgb(6,2,79);
+  background: linear-gradient(90deg, rgba(6,2,79,0.7580429248595506) 0%, rgba(34,31,124,0.8563575316011236) 50%, rgba(6,2,79,0.7608519136235955) 84%);
+  right: 0%;
+  border-radius: 20px;
+}
+
+.Genero .titulo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+
+.Genero h2 {
+  display: flex;
+  padding: 20px;
+  background-color: #3e93a3;
+  border-radius: 20px;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  font-size: 30px;
+  transition: transform 1s;
+  transform: translateX(0) scale(0.5);
+  transition: all 1500ms ease;
+}
+
+.Genero h2:hover {
+  display: flex;
+  padding: 20px;
+  background-color: #040257;
+  border-radius: 20px;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  font-size: 30px;
+  transform: translateX(10px) scale(1.2);
+  transition: all 1500ms ease;
+}
+
+
+.Genero .boxes .box {
+  display: flex;
+}
+
+.Genero p {
+  color: #FFF;
+  width: 100%;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+
+.Genero span {
+  display: flex;
+  width: 100%;
+  font-weight: 600;
+  color: #fa6900;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  font-size: 21px;
+}
+
+
+
+.Genero .container .box{
+  display: flex;
+  font-size: 10px; ;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.Genero .container .box:hover {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+
+.sicial #primeira{
+  transition: all 1s ease;
+  scroll-behavior: smooth;
+}
+
+/*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*/
+
+.show{
+  background-image: url('../assets/img/fundo_cards.jpg');
+  background-size: cover;
+  width: 100vw;
+  height: 500vh;
+  margin-left: 0%;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
+.dashboard{
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  
+}
+.dashboard .container{
+  width: 80%;
+  align-self: center;
+  height: 100%;
+}
+.dashboard .boxes{
+   margin-left: 5%;
+   height: 90vh;
+   width: 75%;
+   padding: 30px;
+   border-radius: 15px;
+   border-radius: 15px;
+   background-color: #c7c7c773;
+}
+.boxes h1{
+   text-align: center;
+   margin-bottom: 13px;
+}
+
+#conteudo_log {
+  
+  display: none;
+}
+
+.show .container{
+  
+  padding: 5%;
+  padding-left: 0px;
+  margin-left: 18%;
+}
+
+.show  .container .cards .card{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5%;
+  flex-wrap: nowrap;
+ 
+}
+
+.show .cards .card {
+  margin: 5%;
+  margin-right: 2px;
+  display: flex;
+ 
+  
+}
+
+main h3{
+  visibility: hidden;
+  color: #fac800;
+  font-size:20px ;
+  font-weight: 900;
+}
+
+main.cards{
+  display: flex;
+  color: #fa6900;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  
+}
+
+main button{
+  cursor: pointer;
+  margin-top: 10%;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  height: 35px;
+  background-color: #69d2e7c1;
+  font-size: 13px;
+  font-weight: 700;
+  color: #000000;
+}
+
+
+main button:hover{
+  cursor: pointer;
+  background-color: #a7dbd8cb;
+}
+
+main span{
+  max-width: 500px;
+}
+
+ #R6{
+  background-image: url('../assets/img/capa.r63.jpg');
+  background-size: cover ;
+  background-position-x: 20%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  transition: all 1.5s ease;
+  height: 5vh;
+  overflow: hidden;
+}
+ 
+#R6:hover{
+  background-image: url('../assets/img/capa.r63.jpg');
+  background-size: cover ;
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  transform: translateX(10px) scale(1.4);
+  transition: all 1.5s ease;
+  height: 45vh;
+  overflow: hidden;
+}
+
+
+#CS{
+  background-image: url('../assets/img/csgo3.jpg');
+  background-size: cover ;
+  background-position-x: 20%;
+  background-position-y: 25%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  transition: all 1.5s ease;
+  height: 5vh;
+  overflow: hidden;
+}
+
+#CS:hover{
+  background-image: url('../assets/img/csgo3.jpg');
+  background-size: cover ;
+  background-position-x: 80%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  transform: translateX(10px) scale(1.4);
+  transition: all 1.5s ease;
+  height: 45vh;
+  overflow: hidden;
+}
+
+#vava{
+ background-image: url('../assets/img/capa_valorant2.jpg');
+ background-size: cover;
+ background-position-x: 40%;
+ background-repeat: no-repeat;
+ color: #fff;
+ border-radius: 10px;
+ transition: all 1.5s ease;
+ height: 5vh;
+ overflow: hidden;
+}
+
+#vava:hover{
+ background-image: url('../assets/img/capa_valorant2.jpg');
+ background-size: cover;
+ background-position-x: 100%;
+ background-repeat: no-repeat;
+ color: #fa6900;
+ border-radius: 10px;
+ transform: translateX(10px) scale(1.2);
+  transition: all 1.5s ease;
+  height: 45vh;
+  overflow: hidden;
+}
+
+#over{
+  background-image: url('../assets/img/capa-overwatch.jpg');
+  background-size: cover;
+  background-position-x: 0%;
+  background-repeat: no-repeat;
+  color: #000000;
+  border-radius: 10px;
+  transition: all 1.5s ease;
+  height: 5vh;
+  overflow: hidden;
+}
+
+#over:hover{
+  background-image: url('../assets/img/capa-overwatch.jpg');
+  background-size: cover;
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+  color: #000000;
+  border-radius: 10px;
+  transform: translateX(10px) scale(1.4);
+  transition: all 1.5s ease;
+  height: 45vh;
+  overflow: hidden;
+}
+
+ #cod{
+  background-image: url('../assets/img/Capa-cod-warzone.jpg');
+  background-size: cover;
+  background-position-x: 81%;
+  background-repeat: no-repeat;
+  color: #fa6900;
+  border-radius: 10px;
+  transition: all 1.5s ease;
+  height: 5vh;
+  overflow: hidden;
+ }
+  
+ #cod:hover{
+  background-image: url('../assets/img/Capa-cod-warzone.jpg');
+  background-size: cover;
+  background-position-x: 12%;
+  background-repeat: no-repeat;
+  color: #fa6900;
+  border-radius: 10px;
+  transform: translateX(10px) scale(1.4);
+  transition: all 1.5s ease;
+  height: 45vh;
+  overflow: hidden;
+}
+
+
+#fort{
+ background-image: url('../assets/img/Fortnite.png');
+ background-size: cover;
+ background-position-x: 25%;
+ background-repeat: no-repeat;
+ color: #000000;
+ border-radius: 10px;
+ transition: all 1.5s ease;
+ height: 5vh;
+ overflow: hidden;
+}
+
+#fort:hover{
+ background-image: url('../assets/img/Fortnite.png');
+ background-size: cover;
+ background-position-x: 80%;
+ background-repeat: no-repeat;
+ color: #fa6900;
+ border-radius: 10px;
+ transform: translateX(10px) scale(1.4);
+  transition: all 1.5s ease;
+  height: 45vh;
+  overflow: hidden;
+}
+
+#War{
+ background-image: url('../assets/img/fundo_warface.jpg');
+ background-size: cover;
+ background-position-x: 20%;
+ background-repeat: no-repeat;
+ color: #000000;
+ border-radius: 10px;
+ transition: all 1.3s ease;
+ height: 5vh;
+ overflow: hidden;
+}
+
+#War:hover{
+ background-image: url('../assets/img/fundo_warface.jpg');
+ background-size: cover;
+ background-position-x: 80%;
+ background-repeat: no-repeat;
+ color: #fa6900;
+ border-radius: 10px;
+ transform: translateX(10px) scale(1.4);
+  transition: all 1.3s ease;
+  height: 45vh;
+  overflow: hidden;
+}
+
+#BF{
+ background-image: url('../assets/img/Battlefield_4_capa.jpg');
+ background-size: cover;
+ background-position-x: 25%;
+ background-repeat: no-repeat;
+ color: #000000;
+ border-radius: 10px;
+ transition: all 1.3s ease;
+ height: 5vh;
+ overflow: hidden;
+}
+
+#BF:hover{
+ background-image: url('../assets/img/Battlefield_4_capa.jpg');
+ background-size: cover;
+ background-position-x: 60%;
+ background-repeat: no-repeat;
+ color: #fa6900;
+ border-radius: 10px;
+ transform: translateX(10px) scale(1.4);
+  transition: all 1.3s ease;
+  height: 45vh;
+  overflow: hidden;
+}
+
+/* cores para o site
+#fa6900 laranja escuro
+#f38630 laranja claro
+#e0e4cc off white
+#a7dbd8 azul claro
+#69d2e7 azul céu  
+*/

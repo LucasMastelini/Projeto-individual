@@ -1,0 +1,29 @@
+
+
+
+.dashboard{
+
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+}
+.dashboard .container{
+    width: 80%;
+    align-self: center;
+    height: 100%;
+}
+ .dashboard .boxes{
+     float: left;
+     margin-top: 40px;
+     height: 90vh;
+     width: 75%;
+     padding: 30px;
+     border-radius: 15px;
+     background-color: #c7c7c773;
+     border: black solid 1px;
+     box-shadow: 5px 10px;
+ }
+ .boxes h1{
+     text-align: center;
+     margin-bottom: 13px;
+ }

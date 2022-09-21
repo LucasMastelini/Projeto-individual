@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cinzel Decorative', cursive;
+    background-image: url('../assets/img/space-909719_960_720.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+    ::-webkit-scrollbar {
+      width: 0;
+  }
+   
+  ::-webkit-scrollbar-track {
+      background-color: #e4e4e4;
+      border-radius: 100px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+      background-color: #f98e37;
+      border-radius: 100px;
+  }
+
+  .banner-login {
+    color: rgb(255, 255, 255);
+    height: 100%;
+    /* border: 3px solid yellow; */
+  }
+  
+  .banner-login .container {
+    height: 550px;
+    /* border: 3px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content:center;
+  }
+  
+  .banner-login {
+    color: #fa6900;
+  }
+  
+  .banner-login .card {
+    background-color: #e5e5e5bb;
+    border-radius: 15px;
+    height: 450px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-right: 20%;
+  }
+  
+  .banner-login a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .banner-login #div_erros_login {
+    margin-top: 15px;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  
+  input {
+    height: 30px;
+    border: 2px solid #fa6900;
+    border-radius: 10px;
+    outline: 0;
+  }
+  
+  .btn {
+    font-family: "Exo 2", sans-serif;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 15px;
+    color: white;
+    background-color: #fa6900;
+    width: 120px;
+    align-self: center;
+    transition: all 0.5s ease;
+   
+  }
+
+  .btn:hover {
+    font-family: "Exo 2", sans-serif;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #fa6900;
+    width: 150px;
+    align-self: center;
+    transform:translate(0% , -25%);
+    transition: all 0.5s ease;
+  }
+  
+  .div_form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .loading-div {
+    width: 50px;
+    /* border: 3px solid pink; */
+    margin: auto;
+    display: none;
+  }
+  
+  .loading-div img {
+    height: 50px;
+    width: 50px;
+  }
